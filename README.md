@@ -17,4 +17,6 @@ Changelog:
 		CRUD Completo Dependente + Abrigada
 	- 0.0.3-
 		CRUD Completo Abrigada + Dependente + Pertences - Relatório pendente
+	- 0.0.4-
+		Branch Sprint1 criado
 
