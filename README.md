@@ -1,4 +1,4 @@
-Projeto Sica - Sistema Casa Abrigo V.0.2
+Projeto Sica - Sistema Casa Abrigo V.0.2.1
 =============================
 
 Authors
@@ -19,4 +19,5 @@ Changelog:
 		CRUD Completo Abrigada + Dependente + Pertences - Relatório pendente
 	- 0.0.4-
 		Branch Sprint1 criado
-
+	- 0.0.5-
+		CRUD Completo Livros
