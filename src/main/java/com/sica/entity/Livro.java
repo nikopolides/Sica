@@ -5,7 +5,6 @@
 package com.sica.entity;
 
 import br.com.caelum.vraptor.ioc.Component;
-import com.sun.xml.internal.bind.v2.model.core.ID;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
