@@ -25,6 +25,9 @@ public class Livro {
     private String titulo;
     private String autor;
     private String publicacao;
+
+    public Livro() {
+    }
     
     
     public Livro(long id, String editora, String titulo, String autor, String publicacao) {
