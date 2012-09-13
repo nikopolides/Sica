@@ -14,59 +14,31 @@
         <link type="text/css" rel="stylesheet" href="../css/geral.css"/>
     </head>
     <body>
-        <h1>Lista de abrigadas:</h1>
-        <a href="<c:url value='/abrigada/form'/>">Cadastrar</a><br />
+        <h1>Lista de livros:</h1>
+        <a href="<c:url value='/livro/form'/>">Cadastrar</a><br />
         <table id="tblist">
             <thead>
             <th>Ações</th>
             <th>ID</th>
-            <th>Nome</th>
-            <th>Cpf</th>
-            <th>Rg</th>
-            <th>Endere&ccedil;o</th>
-            <th>Cep</th>
-            <th>Data de Entrada</th>
-            <th>Data de Nascimento</th>
-            <th>Estado Civil</th>
-            <th>Profiss&atilde;o</th>
-            <th>Nacionalidade</th>
-            <th>Naturalidade</th>
-            <th>Escolaridade</th>
-            <th>Telefone</th>
-            <th>Celular</th>
+            <th>Titulo</th>
+            <th>Editora</th>
+            <th>Autor</th>
+            <th>Ano de Publicação</th>
         </thead>
         <tbody>
-            <c:forEach items="${abrigadaList}" var="abrigada">
+            <c:forEach items="${livroList}" var="livro">
                 <tr>
                     <td>
-                        <a href="<c:url value='/abrigada/deleta/${abrigada.id}'/>">DELETA</a>
+                        <a href="<c:url value='/livro/deleta/${livro.id}'/>">DELETA</a>
                         <br>
-                        <a href="<c:url value='/abrigada/edita/${abrigada.id}'/>">EDITA</a>
-                        <br>
-                        <a href="<c:url value='/dependente/form/${abrigada.id}?nome=${abrigada.nome}' />">CADASTRAR DEPENDENTE</a>
-                        <br>
-                        <a href="<c:url value='/dependente/lista/${abrigada.id}?nome=${abrigada.nome}' />">VISUALIZA DEPENDENTES</a>
-                        <br>
-                        <a href="<c:url value='/pertence/form/${abrigada.id}?nome=${abrigada.nome}' />">CADASTRAR PERTENCE</a>
-                        <br>
-                        <a href="<c:url value='/pertence/lista/${abrigada.id}?nome=${abrigada.nome}' />">VISUALIZA PERTENCE</a>
+                        <a href="<c:url value='/livro/edita/${livro.id}'/>">EDITA</a>
                         <br>
                     </td>
-                    <td>${abrigada.id}</td>
-                    <td>${abrigada.nome}</td>
-                    <td>${abrigada.cpf}</td>
-                    <td>${abrigada.rg}</td>
-                    <td>${abrigada.endereco}</td>
-                    <td>${abrigada.cep}</td>
-                    <td>${abrigada.dataEntrada}</td>
-                    <td>${abrigada.dataNascimento}</td>
-                    <td>${abrigada.estadoCivil}</td>
-                    <td>${abrigada.profissao}</td>
-                    <td>${abrigada.nacionalidade}</td>
-                    <td>${abrigada.naturalidade}</td>
-                    <td>${abrigada.escolaridade}</td>
-                    <td>${abrigada.telefone}</td>
-                    <td>${abrigada.celular}</td>
+                    <td>${livro.id}</td>
+                    <td>${livro.titulo}</td>
+                    <td>${livro.editora}</td>
+                    <td>${livro.autor}</td>
+                    <td>${livro.publicacao}</td>
                 </tr>
             </c:forEach>
         </tbody>
