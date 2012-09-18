@@ -30,6 +30,22 @@ public class RelatorioPsicoSocialController {
         this.validator = validator;
     }
     
-    
+    //@Post("/relatoriopsicosocial")
+    public void adiciona(final RelatorioPsicoSocial relatorioPsicoSocial){
+        // Valida
+        validator.checking(new Validations(){{
+            that(relatorioPsicoSocial.getDescricao() != null, "relatorioPsicoSocial.descricao", "descricao.vazio");
+        
+        }});
+        
+        // Em caso de erro
+        //validator.onErrorUsePageOf(this.getClass()).form(); retirar comment ao adicionar form
+        
+        // Adiciona
+        dao.adiciona(relatorioPsicoSocial); 
+
+        // Redireciona para a listagem
+        //result.redirectTo(this.getClass()).lista(); retirar comment ao adicionar metodo lista
+    }
     
 }
