@@ -26,7 +26,7 @@
                 <td>ID Abrigada</td><td>${relatorioPsicoSocial.idAbrigada}</td>
             </tr>
             <tr>
-                <td>Descrição</td><td>${relatorioPsicoSocial.descrição}</td>
+                <td>Descrição</td><td>${relatorioPsicoSocial.descricao}</td>
             </tr>            
 
         </table>
