@@ -31,7 +31,7 @@ public class ProcessoDependenteController {
     }
 
     @Path("/processoDependente/form/{idProcessoDependente}")
-    public void form(long idProcessoDependenteDependente) {
+    public void form(long idProcessoDependente) {
         result.include("idProcessoDependente", idProcessoDependente);
     }
 
@@ -50,7 +50,7 @@ public class ProcessoDependenteController {
         validator.checking(new Validations() {
 
             {
-                that(processoDependente.getDescricao() != null, "processoDependente.descricao", "descricao.vazio");
+                that(processoDependente.getNumeroBoletimOcorrencia() != null, "processoDependente.numeroBoletimOcorrencia", "numeroBoletimOcorrencia.vazio");
             }
         });
 
