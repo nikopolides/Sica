@@ -4,10 +4,10 @@
  */
 package com.sica.dao;
 
+import com.sica.entity.Livro;
 import javax.persistence.EntityManager;
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
+import javax.persistence.Persistence;
+import org.junit.*;
 
 /**
  *
@@ -19,12 +19,13 @@ public class LivroDAOTest {
     public LivroDAOTest() {
     }
     
-    @Before
+    @BeforeClass
     public void setUp() {
-        
+        em = Persistence.createEntityManagerFactory("default").createEntityManager();
+        em.getTransaction().begin();    
     }
     
-    @After
+    @AfterClass
     public void tearDown() {
     }
 
@@ -33,8 +34,13 @@ public class LivroDAOTest {
      */
     @Test
     public void testAdiciona() {
-        
-        
+        Livro livro = new Livro();
+        livro.setTitulo("E o vento Levou");
+        livro.setAutor("Cotrim");
+        livro.setEditora("Nas alturas");
+        livro.setPublicacao("1988");
+        LivroDAO dao = new LivroDAO(em);
+        dao.adiciona(livro);
     }
     
     
