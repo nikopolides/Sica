@@ -48,4 +48,9 @@ public class RelatorioPsicoSocialController {
         //result.redirectTo(this.getClass()).lista(); retirar comment ao adicionar metodo lista
     }
     
+    @Path("/relatorioPsicoSocial/info/{relatorioPsicoSocial.id}")
+    public RelatorioPsicoSocial info(RelatorioPsicoSocial relatorioPsicoSocial){
+       return dao.findById(relatorioPsicoSocial);
+    }
+    
 }
