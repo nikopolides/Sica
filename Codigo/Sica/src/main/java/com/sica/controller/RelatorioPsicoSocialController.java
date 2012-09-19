@@ -30,7 +30,12 @@ public class RelatorioPsicoSocialController {
         this.validator = validator;
     }
     
-    //@Post("/relatoriopsicosocial")
+    @Path("/relatorioPsicoSocial/form/{idAbrigada}")
+    public void form(long idAbrigada){
+        result.include("idAbrigada",idAbrigada);
+    }
+    
+    @Path("/relatoriopsicosocial/adiciona")
     public void adiciona(final RelatorioPsicoSocial relatorioPsicoSocial){
         // Valida
         validator.checking(new Validations(){{
