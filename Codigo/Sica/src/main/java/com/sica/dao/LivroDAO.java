@@ -35,7 +35,7 @@ public class LivroDAO {
     public List<Livro> listaTodos(){
         Query query = entityManager.createQuery("from Livro");
         List<Livro> lista = query.getResultList();
-        entityManager.close();
+        //entityManager.close();
         return lista;
     }
     
