@@ -40,7 +40,7 @@ public class ProcessoController {
 
         result.include("action", 1);
         result.include("processo", dao.findById(processo));
-        result.include("abrigada", dao.findAbrigadaById(dao.findById(processo).getIdAbrigada()));
+        //result.include("abrigada", dao.findAbrigadaById(dao.findById(processo).getIdAbrigada())); Comentado por ATHOS, apagar quando parar de quebrar
         result.redirectTo("/processo/form/" + processo.getId());
     }
 
@@ -50,14 +50,14 @@ public class ProcessoController {
         validator.checking(new Validations() {
 
             {
-                that(processo.getDescricao() != null, "processo.descricao", "descricao.vazio");
+                //that(processo.getDescricao() != null, "processo.descricao", "descricao.vazio"); Comentado por ATHOS, apagar quando parar de quebrar
             }
         });
 
         // Em caso de erro
         result.include("action");
         result.include("abrigada", processo);
-        validator.onErrorUsePageOf(this.getClass()).form(processo.getId());
+        //validator.onErrorUsePageOf(this.getClass()).form(processo.getId()); Comentado por ATHOS, apagar quando parar de quebrar
 
         // Adiciona
         dao.edita(processo);
