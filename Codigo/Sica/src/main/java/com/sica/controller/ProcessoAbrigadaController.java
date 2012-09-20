@@ -9,6 +9,7 @@ import br.com.caelum.vraptor.Resource;
 import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.Validator;
 import br.com.caelum.vraptor.validator.Validations;
+import com.sica.dao.ProcessoAbrigadaDAO;
 //import com.sica.dao.ProcessoAbrigadaDAO; Comentado por ATHOS, apagar quando parar de quebrar
 import com.sica.entity.ProcessoAbrigada;
 
@@ -22,13 +23,14 @@ public class ProcessoAbrigadaController {
     //private ProcessoAbrigadaDAO dao; Comentado por ATHOS, apagar quando parar de quebrar
     private Result result;
     private Validator validator;
+    private ProcessoAbrigadaDAO dao;
 
-    /*public ProcessoAbrigadaController(ProcessoAbrigadaDAO d, Result r, Validator v) {
+    public ProcessoAbrigadaController(ProcessoAbrigadaDAO d, Result r, Validator v) {
         this.dao = d;
         this.result = r;
         this.validator = v;
-        System.out.println("Criando processoAbrigadaController"); 
-    } Comentado por ATHOS, apagar quando parar de quebrar */
+        System.out.println("Criando processoAbrigadaController");
+    }
 
     @Path("/processoAbrigada/form/{idProcessoAbrigada}")
     public void form(long idProcessoAbrigada) {
