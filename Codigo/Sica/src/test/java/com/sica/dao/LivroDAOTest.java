@@ -63,5 +63,10 @@ public class LivroDAOTest {
         assertEquals(1, instance.findById(livro).getId());
     }
     
+    @Test
+    public void testFindByID(){
+        
+    }
+    
     
 }
