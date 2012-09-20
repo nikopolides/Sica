@@ -44,13 +44,13 @@ public class RelatorioPsicoSocialController {
         }});
         
         // Em caso de erro
-        //validator.onErrorUsePageOf(this.getClass()).form(); retirar comment ao adicionar form
+        validator.onErrorUsePageOf(this.getClass()).form(relatorioPsicoSocial.getIdAbrigada());
         
         // Adiciona
         dao.adiciona(relatorioPsicoSocial); 
 
         // Redireciona para a listagem
-        //result.redirectTo(this.getClass()).lista(); retirar comment ao adicionar metodo lista
+        //result.redirectTo(this.getClass()).lista();
     }
     
     @Path("/relatorioPsicoSocial/info/{relatorioPsicoSocial.id}")
