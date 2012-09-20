@@ -4,6 +4,7 @@
  */
 package com.sica.dao;
 
+
 import com.sica.entity.Livro;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
@@ -22,6 +23,7 @@ public class LivroDAOTest {
     static LivroDAO instance;
     
     public LivroDAOTest() {
+    
     }
     
     @BeforeClass
