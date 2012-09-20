@@ -26,7 +26,7 @@ public class ProcessoDependente extends Processo{
     public ProcessoDependente() {
     }
 
-    public ProcessoDependente(Long idDependente, String pastaVaraInfancia, boolean presenciouAgressao, Long idAbrigada, String id, long numeroBoletimOcorrencia, String orgaoEncaminhamento, String medidasProtetivas, String tipoViolencia, boolean primeiraAgressao, String primeiraOcorrencia, String tempoAgressao, boolean processosJudiciais, String numeroMedidas, String dataAudienciaProtetiva, String juizado, boolean intimacaoAgressor, String medidasDeferidas, String encaminhamentoDefensoria, String acaoCivil, String numeroProcessoCivil, String juizoCivil, String dataAudienciaCivil) {
+    public ProcessoDependente(Long idDependente, String pastaVaraInfancia, boolean presenciouAgressao, Long idAbrigada, Long id, Long numeroBoletimOcorrencia, String orgaoEncaminhamento, String medidasProtetivas, String tipoViolencia, boolean primeiraAgressao, String primeiraOcorrencia, String tempoAgressao, boolean processosJudiciais, String numeroMedidas, String dataAudienciaProtetiva, String juizado, boolean intimacaoAgressor, String medidasDeferidas, String encaminhamentoDefensoria, String acaoCivil, String numeroProcessoCivil, String juizoCivil, String dataAudienciaCivil) {
         super(id, numeroBoletimOcorrencia, orgaoEncaminhamento, medidasProtetivas, tipoViolencia, primeiraAgressao, primeiraOcorrencia, tempoAgressao, processosJudiciais, numeroMedidas, dataAudienciaProtetiva, juizado, intimacaoAgressor, medidasDeferidas, encaminhamentoDefensoria, acaoCivil, numeroProcessoCivil, juizoCivil, dataAudienciaCivil);
         this.idDependente = idDependente;
         this.pastaVaraInfancia = pastaVaraInfancia;

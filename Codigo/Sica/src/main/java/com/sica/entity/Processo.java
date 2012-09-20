@@ -16,10 +16,11 @@ import javax.persistence.Id;
 @Entity
 @Component
 public class Processo {
+
     @Id
     @GeneratedValue
-    private String id;
-    private long numeroBoletimOcorrencia;
+    private Long id;
+    private Long numeroBoletimOcorrencia;
     private String orgaoEncaminhamento;
     private String medidasProtetivas;
     private String tipoViolencia;
@@ -27,28 +28,23 @@ public class Processo {
     private String primeiraOcorrencia;
     private String tempoAgressao;
     private boolean processosJudiciais;
-    
     //dados processuais - medidas protetivas de urgencia
-    
     private String numeroMedidas;
     private String dataAudienciaProtetiva;
     private String juizado;
     private boolean intimacaoAgressor;
     private String medidasDeferidas;
-    
     //acoes civeis
-    
     private String encaminhamentoDefensoria;
     private String acaoCivil;
     private String numeroProcessoCivil;
     private String juizoCivil;
     private String dataAudienciaCivil;
-   
 
     public Processo() {
     }
 
-    public Processo(String id, long numeroBoletimOcorrencia, String orgaoEncaminhamento, String medidasProtetivas, String tipoViolencia, boolean primeiraAgressao, String primeiraOcorrencia, String tempoAgressao, boolean processosJudiciais, String numeroMedidas, String dataAudienciaProtetiva, String juizado, boolean intimacaoAgressor, String medidasDeferidas, String encaminhamentoDefensoria, String acaoCivil, String numeroProcessoCivil, String juizoCivil, String dataAudienciaCivil) {
+    public Processo(Long id, Long numeroBoletimOcorrencia, String orgaoEncaminhamento, String medidasProtetivas, String tipoViolencia, boolean primeiraAgressao, String primeiraOcorrencia, String tempoAgressao, boolean processosJudiciais, String numeroMedidas, String dataAudienciaProtetiva, String juizado, boolean intimacaoAgressor, String medidasDeferidas, String encaminhamentoDefensoria, String acaoCivil, String numeroProcessoCivil, String juizoCivil, String dataAudienciaCivil) {
         this.id = id;
         this.numeroBoletimOcorrencia = numeroBoletimOcorrencia;
         this.orgaoEncaminhamento = orgaoEncaminhamento;
@@ -69,8 +65,6 @@ public class Processo {
         this.juizoCivil = juizoCivil;
         this.dataAudienciaCivil = dataAudienciaCivil;
     }
-    
-    
 
     public String getAcaoCivil() {
         return acaoCivil;
@@ -104,8 +98,6 @@ public class Processo {
         this.numeroProcessoCivil = numeroProcessoCivil;
     }
 
-    
-    
     public String getDataAudienciaProtetiva() {
         return dataAudienciaProtetiva;
     }
@@ -154,17 +146,13 @@ public class Processo {
         this.numeroMedidas = numeroMedidas;
     }
 
-   
-
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
-
-
 
     public String getMedidasProtetivas() {
         return medidasProtetivas;
@@ -174,14 +162,13 @@ public class Processo {
         this.medidasProtetivas = medidasProtetivas;
     }
 
-    public long getNumeroBoletimOcorrencia() {
+    public Long getNumeroBoletimOcorrencia() {
         return numeroBoletimOcorrencia;
     }
 
-    public void setNumeroBoletimOcorrencia(long numeroBoletimOcorrencia) {
+    public void setNumeroBoletimOcorrencia(Long numeroBoletimOcorrencia) {
         this.numeroBoletimOcorrencia = numeroBoletimOcorrencia;
     }
-
 
     public String getOrgaoEncaminhamento() {
         return orgaoEncaminhamento;
@@ -235,12 +222,4 @@ public class Processo {
     public String toString() {
         return "Processo{  id=" + id + ", numeroBoletimOcorrencia=" + numeroBoletimOcorrencia + ", orgaoEncaminhamento=" + orgaoEncaminhamento + ", medidasProtetivas=" + medidasProtetivas + ", tipoViolencia=" + tipoViolencia + ", primeiraAgressao=" + primeiraAgressao + ", primeiraOcorrencia=" + primeiraOcorrencia + ", tempoAgressao=" + tempoAgressao + ", processosJudiciais=" + processosJudiciais + ", numeroMedidas=" + numeroMedidas + ", dataAudiencia=" + dataAudienciaProtetiva + ", juizado=" + juizado + ", intimacaoAgressor=" + intimacaoAgressor + ", medidasDeferidas=" + medidasDeferidas + ", encaminhamentoDefensoria=" + encaminhamentoDefensoria + ", acaoCivil=" + acaoCivil + ", numeroProcessoCivil=" + numeroProcessoCivil + ", juizoCivil=" + juizoCivil + ", dataAudienciaCivil=" + dataAudienciaCivil + '}';
     }
-
-   
-    
-
-  
-
-    
-    
 }
