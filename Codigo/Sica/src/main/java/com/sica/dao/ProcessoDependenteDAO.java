@@ -19,24 +19,25 @@ import javax.persistence.Query;
 public class ProcessoDependenteDAO {
 
     private EntityManager entityManager;
-    
-    public ProcessoDependenteDAO(EntityManager entityManager){
+
+    public ProcessoDependenteDAO(EntityManager entityManager) {
         this.entityManager = entityManager;
     }
-    
-    
-    public void edita(ProcessoDependente processoDependente){
+
+    public void edita(ProcessoDependente processoDependente) {
         entityManager.merge(processoDependente);
         entityManager.getTransaction().commit();
     }
-    
-    public ProcessoDependente findById(ProcessoDependente processoDependente){
+
+    public ProcessoDependente findById(ProcessoDependente processoDependente) {
         return entityManager.find(ProcessoDependente.class, processoDependente.getId());
     }
-    public Dependente findDependenteById(Long id){
+
+    public Dependente findDependenteById(Long id) {
         return entityManager.find(Dependente.class, id);
     }
-    public List<ProcessoDependente> listaTodos(){
+
+    public List<ProcessoDependente> listaTodos() {
         Query query = entityManager.createQuery("from processos");
         List<ProcessoDependente> lista = query.getResultList();
         entityManager.close();

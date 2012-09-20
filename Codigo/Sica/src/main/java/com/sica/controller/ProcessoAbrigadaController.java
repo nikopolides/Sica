@@ -10,7 +10,6 @@ import br.com.caelum.vraptor.Result;
 import br.com.caelum.vraptor.Validator;
 import br.com.caelum.vraptor.validator.Validations;
 import com.sica.dao.ProcessoAbrigadaDAO;
-//import com.sica.dao.ProcessoAbrigadaDAO; Comentado por ATHOS, apagar quando parar de quebrar
 import com.sica.entity.ProcessoAbrigada;
 
 /**
@@ -20,7 +19,6 @@ import com.sica.entity.ProcessoAbrigada;
 @Resource
 public class ProcessoAbrigadaController {
 
-    //private ProcessoAbrigadaDAO dao; Comentado por ATHOS, apagar quando parar de quebrar
     private Result result;
     private Validator validator;
     private ProcessoAbrigadaDAO dao;
@@ -41,8 +39,8 @@ public class ProcessoAbrigadaController {
     public void edita(ProcessoAbrigada processoAbrigada) {
 
         result.include("action", 1);
-        //result.include("processoAbrigada", dao.findById(processoAbrigada)); Comentado por ATHOS, apagar quando parar de quebrar
-        //result.include("abrigada", dao.findAbrigadaById(dao.findById(processoAbrigada).getIdAbrigada())); Comentado por ATHOS, apagar quando parar de quebrar
+        result.include("processoAbrigada", dao.findById(processoAbrigada));
+        result.include("abrigada", dao.findAbrigadaById(dao.findById(processoAbrigada).getIdAbrigada()));
         result.redirectTo("/processoAbrigada/form/" + processoAbrigada.getId());
     }
 
@@ -52,17 +50,17 @@ public class ProcessoAbrigadaController {
         validator.checking(new Validations() {
 
             {
-                //that(processoAbrigada.getNumeroBoletimOcorrencia() != null, "processoAbrigada.numeroBoletimOcorrencia", "numeroBoletimOcorrencia.vazio"); Comentado por ATHOS, apagar quando parar de quebrar
+                that(processoAbrigada.getNumeroBoletimOcorrencia() != null, "processoAbrigada.numeroBoletimOcorrencia", "numeroBoletimOcorrencia.vazio");
             }
         });
 
         // Em caso de erro
         result.include("action");
         result.include("abrigada", processoAbrigada);
-        //validator.onErrorUsePageOf(this.getClass()).form(processoAbrigada.getId()); Comentado por ATHOS, apagar quando parar de quebrar
+        validator.onErrorUsePageOf(this.getClass()).form(processoAbrigada.getIdAbrigada());
 
         // Adiciona
-        //dao.edita(processoAbrigada); Comentado por ATHOS, apagar quando parar de quebrar
+        dao.edita(processoAbrigada);
 
         // Redireciona para a listagem
         //result.redirectTo(this.getClass()).lista();
