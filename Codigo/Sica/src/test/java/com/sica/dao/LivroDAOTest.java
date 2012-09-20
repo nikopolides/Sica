@@ -6,6 +6,7 @@ package com.sica.dao;
 
 
 import com.sica.entity.Livro;
+import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
 import org.hibernate.cfg.AnnotationConfiguration;
@@ -64,8 +65,17 @@ public class LivroDAOTest {
     }
     
     @Test
-    public void testFindByID(){
+    public void testListarLivro(){
+        List result = instance.listaTodos();
+        assertNotNull(result);
         
+    }
+    
+    @Test
+    public void testFindByID(){
+        livro.setId(1);
+        Livro result = instance.findById(livro);
+        assertNotNull(result);
     }
     
     
