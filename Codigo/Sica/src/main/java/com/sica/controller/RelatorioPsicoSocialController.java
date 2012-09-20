@@ -34,6 +34,12 @@ public class RelatorioPsicoSocialController {
     public void form(long idAbrigada){
         result.include("idAbrigada",idAbrigada);
     }
+        
+    //@Get("/relatorioPsicoSocial")
+    @Path("/relatorioPsicoSocial/lista/{relatorioPsicoSocial.idAbrigada}")
+    public List<RelatorioPsicoSocial> lista(RelatorioPsicoSocial relatorioPsicoSocial){
+        return dao.listaTodos(relatorioPsicoSocial);
+    }
     
     @Path("/relatoriopsicosocial/adiciona")
     public void adiciona(final RelatorioPsicoSocial relatorioPsicoSocial){
@@ -44,13 +50,13 @@ public class RelatorioPsicoSocialController {
         }});
         
         // Em caso de erro
-        validator.onErrorUsePageOf(this.getClass()).form(relatorioPsicoSocial.getIdAbrigada());
+        //validator.onErrorUsePageOf(this.getClass()).form(); retirar comment ao adicionar form
         
         // Adiciona
         dao.adiciona(relatorioPsicoSocial); 
 
         // Redireciona para a listagem
-        //result.redirectTo(this.getClass()).lista();
+        //result.redirectTo(this.getClass()).lista(); retirar comment ao adicionar metodo lista
     }
     
     @Path("/relatorioPsicoSocial/info/{relatorioPsicoSocial.id}")

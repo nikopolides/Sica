@@ -16,19 +16,27 @@ import javax.persistence.Query;
  */
 @Component
 public class RelatorioPsicoSocialDAO {
-
     private EntityManager manager;
-
-    public RelatorioPsicoSocialDAO(EntityManager manager) {
+    
+    public RelatorioPsicoSocialDAO(EntityManager manager){
         this.manager = manager;
     }
-
+    
     public void adiciona(RelatorioPsicoSocial relatorioPsicoSocial) {
         manager.persist(relatorioPsicoSocial);
         manager.getTransaction().commit();
     }
-
+    
+    public List<RelatorioPsicoSocial> listaTodos(RelatorioPsicoSocial relatorioPsicoSocial) {
+        Query query = manager.createQuery("from RelatorioPsicoSocial relatorioPsicoSocial where idAbrigada = "+relatorioPsicoSocial.getIdAbrigada());
+        List<RelatorioPsicoSocial> lista = query.getResultList();
+        //manager.close();
+        return lista;
+    }
+    
     public RelatorioPsicoSocial findById(RelatorioPsicoSocial relatorioPsicoSocial) {
         return manager.find(RelatorioPsicoSocial.class, relatorioPsicoSocial.getId());
     }
+    
+    
 }

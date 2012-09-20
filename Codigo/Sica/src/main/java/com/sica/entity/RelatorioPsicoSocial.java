@@ -26,6 +26,12 @@ public class RelatorioPsicoSocial {
     public RelatorioPsicoSocial() {
     }
 
+    public RelatorioPsicoSocial(long id, String descricao, long idAbrigada) {
+        this.id = id;
+        this.descricao = descricao;
+        this.idAbrigada = idAbrigada;
+    }
+
     public String getDescricao() {
         return descricao;
     }

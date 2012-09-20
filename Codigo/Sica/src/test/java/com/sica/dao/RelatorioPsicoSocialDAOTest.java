@@ -19,18 +19,22 @@ import static org.junit.Assert.*;
  */
 public class RelatorioPsicoSocialDAOTest {
     static EntityManager em;
+    static RelatorioPsicoSocial relatorioPsicoSocial;
+    static RelatorioPsicoSocialDAO instance;
     
     public RelatorioPsicoSocialDAOTest() {
     }
 
     @BeforeClass
     public static void setUpClass() throws Exception {
-        //AnnotationConfiguration config = new AnnotationConfiguration();
-       // config.addAnnotatedClass(Abrigada.class);
-       // config.configure();
-        //new SchemaExport(config).create(true, true); 
+        AnnotationConfiguration config = new AnnotationConfiguration();
+        config.addAnnotatedClass(RelatorioPsicoSocial.class);
+        config.configure();
+        new SchemaExport(config).create(true, true); 
         em = Persistence.createEntityManagerFactory("default").createEntityManager();
         em.getTransaction().begin();
+        relatorioPsicoSocial = new RelatorioPsicoSocial(0, "bla bla bla xpto", Long.parseLong("1"));
+        instance = new RelatorioPsicoSocialDAO(em);
     }
 
     @AfterClass
@@ -39,6 +43,8 @@ public class RelatorioPsicoSocialDAOTest {
     
     @Before
     public void setUp() {
+          if(!em.getTransaction().isActive())
+              em.getTransaction().begin();
     }
     
     @After
@@ -50,16 +56,22 @@ public class RelatorioPsicoSocialDAOTest {
      */
     @Test
     public void testAdiciona() {
-        System.out.println("adiciona");
-        RelatorioPsicoSocial relatorioPsicoSocial = new RelatorioPsicoSocial();
-        relatorioPsicoSocial.setDescricao("bla bla bla XPTO");
-        RelatorioPsicoSocialDAO instance = new RelatorioPsicoSocialDAO(em);
         instance.adiciona(relatorioPsicoSocial);
         relatorioPsicoSocial.setId(1);
         assertNotNull(instance.findById(relatorioPsicoSocial));
         assertEquals(1,instance.findById(relatorioPsicoSocial).getId());
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
+    }
+    
+    /**
+     * Test of listaTodos method, of class RelatorioPsicoSocialDAO.
+     */
+    @Test
+    public void testListaTodos() {
+        List result = instance.listaTodos(relatorioPsicoSocial);
+        assertNotNull(result);
+        // TODO review the generated test code and remove the default call to fail.
     }
 
     /**
@@ -68,12 +80,9 @@ public class RelatorioPsicoSocialDAOTest {
     @Test
     public void testFindById() {
         System.out.println("findById");
-        RelatorioPsicoSocial relatorioPsicoSocial = new RelatorioPsicoSocial();
-        RelatorioPsicoSocialDAO instance = new RelatorioPsicoSocialDAO(em);
-        relatorioPsicoSocial.setDescricao("bla bla bla XPTO");
         relatorioPsicoSocial.setId(1);
-        assertNotNull(instance.findById(relatorioPsicoSocial));
-        assertEquals(1,instance.findById(relatorioPsicoSocial).getId());
+        RelatorioPsicoSocial result = instance.findById(relatorioPsicoSocial);
+        assertNotNull(result);
         // TODO review the generated test code and remove the default call to fail.
         //fail("The test case is a prototype.");
     }
