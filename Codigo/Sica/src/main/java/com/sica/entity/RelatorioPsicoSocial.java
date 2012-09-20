@@ -22,9 +22,9 @@ public class RelatorioPsicoSocial {
     //@Text => String descricao nao pode ser char(255) (?)
     private String descricao;
     private long idAbrigada;
-   // boolean ativo;
+    private Boolean ativo;
 
-        public RelatorioPsicoSocial() {
+        public RelatorioPsicoSocial() {   
     }
 
     public String getDescricao() {
@@ -34,15 +34,15 @@ public class RelatorioPsicoSocial {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-    /*
+    
     public boolean getAtivo() {
         return ativo;
     }
 
-    public void setAtivo(boolean ativo) {
+    public void setAtivo(Boolean ativo) {
         this.ativo = ativo;
     }
-*/
+
     public long getId() {
         return id;
     }

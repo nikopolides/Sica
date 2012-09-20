@@ -53,6 +53,7 @@ public class RelatorioPsicoSocialDAOTest {
         System.out.println("adiciona");
         RelatorioPsicoSocial relatorioPsicoSocial = new RelatorioPsicoSocial();
         relatorioPsicoSocial.setDescricao("bla bla bla XPTO");
+        relatorioPsicoSocial.setAtivo(true);
         RelatorioPsicoSocialDAO instance = new RelatorioPsicoSocialDAO(em);
         instance.adiciona(relatorioPsicoSocial);
         relatorioPsicoSocial.setId(1);
@@ -71,6 +72,7 @@ public class RelatorioPsicoSocialDAOTest {
         RelatorioPsicoSocial relatorioPsicoSocial = new RelatorioPsicoSocial();
         RelatorioPsicoSocialDAO instance = new RelatorioPsicoSocialDAO(em);
         relatorioPsicoSocial.setDescricao("bla bla bla XPTO");
+        relatorioPsicoSocial.setAtivo(true);
         relatorioPsicoSocial.setId(1);
         assertNotNull(instance.findById(relatorioPsicoSocial));
         assertEquals(1,instance.findById(relatorioPsicoSocial).getId());
