@@ -23,17 +23,21 @@ public class AbrigadaDAO {
     }
     
     public void adiciona(Abrigada abrigada){
-        //manager.getTransaction().begin();
+        if(!manager.getTransaction().isActive()){
+            manager.getTransaction().begin();
+        }
         manager.persist(abrigada);
         manager.getTransaction().commit();
     }
     
     public void edita(Abrigada abrigada){
         manager.merge(abrigada);
-        manager.getTransaction().commit();
     }
     
     public List<Abrigada> listaTodos() {
+        if(!manager.getTransaction().isActive()){
+            manager.getTransaction().begin();
+        }
         Query query = manager.createQuery("from Abrigada abrigada");
         List<Abrigada> lista = query.getResultList();
         manager.close();
@@ -41,6 +45,9 @@ public class AbrigadaDAO {
     }
     
     public void deleta(Abrigada abrigada){
+        if(!manager.getTransaction().isActive()){
+            manager.getTransaction().begin();
+        }
         abrigada = manager.getReference(Abrigada.class, abrigada.getId());
         manager.remove(abrigada);
         manager.getTransaction().commit();

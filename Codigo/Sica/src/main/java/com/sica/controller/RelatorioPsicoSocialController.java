@@ -30,6 +30,32 @@ public class RelatorioPsicoSocialController {
         this.validator = validator;
     }
     
+    @Path("/relatorioPsicoSocial/form/{idAbrigada}")
+    public void form(long idAbrigada){
+        result.include("idAbrigada",idAbrigada);
+    }
     
+    @Path("/relatoriopsicosocial/adiciona")
+    public void adiciona(final RelatorioPsicoSocial relatorioPsicoSocial){
+        // Valida
+        validator.checking(new Validations(){{
+            that(relatorioPsicoSocial.getDescricao() != null, "relatorioPsicoSocial.descricao", "descricao.vazio");
+        
+        }});
+        
+        // Em caso de erro
+        validator.onErrorUsePageOf(this.getClass()).form(relatorioPsicoSocial.getIdAbrigada());
+        
+        // Adiciona
+        dao.adiciona(relatorioPsicoSocial); 
+
+        // Redireciona para a listagem
+        //result.redirectTo(this.getClass()).lista();
+    }
+    
+    @Path("/relatorioPsicoSocial/info/{relatorioPsicoSocial.id}")
+    public RelatorioPsicoSocial info(RelatorioPsicoSocial relatorioPsicoSocial){
+       return dao.findById(relatorioPsicoSocial);
+    }
     
 }
