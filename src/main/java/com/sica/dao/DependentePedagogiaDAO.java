@@ -28,7 +28,7 @@ public class DependentePedagogiaDAO {
             manager.getTransaction().begin();
         }
         manager.persist(dependente);
-        manager.getTransaction().commit();
+        //manager.getTransaction().commit();
     }
     
     public void edita(DependentePedagogia dependentePedagogia){

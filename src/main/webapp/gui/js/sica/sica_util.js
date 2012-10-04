@@ -19,6 +19,9 @@ camposFormAbrigada = new Array("abrigada_nome", "abrigada_cpf", "abrigada_rg", "
 					 "abrigada_telefone", "abrigada_endereco", "abrigada_cep", "abrigada_nascimento", "abrigada_estado_civil", "abrigada_profissao", 
 					 "abrigada_escolaridade", "dependenteSim", "dependenteNao");
 
+camposFormLivro = new Array();
+camposFormDependentePedagogia = new Array();
+
 ALERT_SUCCESS = 0;
 ALERT_WARNING = 1;
 ALERT_ERROR = 2;

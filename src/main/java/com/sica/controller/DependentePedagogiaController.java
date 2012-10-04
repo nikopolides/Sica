@@ -30,8 +30,7 @@ public class DependentePedagogiaController {
     }
     
     @Path("/dependentePedagogia/form")
-    public void form(long idAbrigada){
-        result.include("idAbrigada",idAbrigada);
+    public void form(){      
     }
     
     //@Get("/dependentePedagogia")
@@ -45,7 +44,7 @@ public class DependentePedagogiaController {
         return dependentePedagogia;    
     }
     
-    public void adiciona(final DependentePedagogia dependente){
+    public void adiciona(final DependentePedagogia dependentePedagogia){
         // Valida
         /*validator.checking(new Validations(){{
             //campos obrigatórios que devem ser preenchidos
@@ -111,7 +110,7 @@ public class DependentePedagogiaController {
         validator.onErrorUsePageOf(this.getClass()).form(dependente.getIdAbrigada()); 
         **/
         // Adiciona
-        dao.adiciona(dependente); 
+        dao.adiciona(dependentePedagogia); 
 
         // Redireciona para a listagem
         result.redirectTo(this.getClass()).lista();
@@ -122,8 +121,7 @@ public class DependentePedagogiaController {
         // Redireciona para o form de cadastro
         result.include("action", 1);
         result.include("dependentePedadogia", dao.findById(dependentePedagogia));
-        result.include("idAbrigada",dao.findById(dependentePedagogia).getIdAbrigada());
-        result.redirectTo("/dependentePedagogia/form/"+dependentePedagogia.getIdAbrigada());  
+        result.redirectTo("/dependentePedagogia/form");  
     }
     
     @Path("/dependentePedagogia/atualizar")
@@ -133,17 +131,14 @@ public class DependentePedagogiaController {
 //            that(dependentePedagogia.getNome() != null, "dependentePedagogia.nome", "nome.vazio");
 //        }});
         
-        // Em caso de erro
-        result.include("action");
-        result.include("dependentePedagogia", dependentePedagogia);
 //        validator.onErrorUsePageOf(this.getClass()).form(dependentePedagogia.getIdAbrigada()); 
         // Adiciona
         dao.edita(dependentePedagogia); 
         // Redireciona para a listagem
-        result.redirectTo("/dependentePedagogia/lista/"+dependentePedagogia.getIdAbrigada());
+        result.redirectTo("/dependentePedagogia/lista");
     }
     
-    @Path("/dependentePedagogia/info/{dependentePsicologia.id}")
+    @Path("/dependentePedagogia/info/{dependentePedagogia.idDependente}")
     public DependentePedagogia info(DependentePedagogia dependentePedagogia){
        return dao.findById(dependentePedagogia);
     }

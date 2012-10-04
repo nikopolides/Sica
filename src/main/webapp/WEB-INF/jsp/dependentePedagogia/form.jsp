@@ -32,8 +32,8 @@
                     <form action="<c:url value="/dependentePedagogia/atualizar"/>" method="post">
                     </c:otherwise>
                 </c:choose>
-                <input type="hidden" name="dependentePedagogia.id" value="${dependentePedagogia.id}" />
-                <input type="hidden" name="dependentePedagogia.idAbrigada" value="${idAbrigada}" />
+                <input type="hidden" name="dependentePedagogia.idDependente" value="${dependentePedagogia.idDependente}" />
+                <input type="hidden" name="dependentePedagogia.idAbrigada" value="${dependentePedagogia.idAbrigada}" />
                 Prontuario: <input type="text" name="dependentePedagogia.prontuario" value="${dependentePedagogia.prontuario}" /><br/>
                 Data Admissão: <input type="text" name="dependentePedagogia.dataAdmissao" value="${dependentePedagogia.dataAdmissao}" /><br/>
                 Abrigada: <input type="text" name="dependentePedagogia.nomeAbrigada" value="${dependentePedagogia.nomeAbrigada}" /><br/>

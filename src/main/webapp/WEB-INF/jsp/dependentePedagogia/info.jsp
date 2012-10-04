@@ -135,7 +135,7 @@
                 <td> Encaminhada ao IML?</td><td>${dependentePedagogia.encaminhadaIMLSexual}</td>
             </tr>
             <tr>
-                <td> Patrimonial: </td><td>${dependentePedagogia.encaminhadaIMLFisicaviolenciaPatrimonial}</td>
+                <td> Patrimonial: </td><td>${dependentePedagogia.violenciaPatrimonial}</td>
             </tr>
             <tr>
                 <td>de que forma? </td><td>${dependentePedagogia.qualFormaPatrimonial}</td>

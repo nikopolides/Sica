@@ -62,7 +62,7 @@
                         <c:forEach items="${dependentePedagogiaList}" var="dependentePedagogia">
                             <tr>
                                 <td>${dependentePedagogia.nome}</td>
-                                <td><a href="">Detalhes</a></td>
+                                <td><a href="<c:url value='/dependentePedagogia/info/${dependentePedagogia.idDependente}'/>">Detalhes</a></td>
                             </tr>
                         </c:forEach>
                     </tbody>
