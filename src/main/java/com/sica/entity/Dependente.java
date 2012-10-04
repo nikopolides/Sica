@@ -8,7 +8,6 @@ import br.com.caelum.vraptor.ioc.Component;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
-import javax.persistence.OneToOne;
 
 /**
  *
@@ -24,20 +23,8 @@ public class Dependente {
     private String nome;
     private int idade;
     private String sexo;
-    
-   
-    
-    /*
-     * Dados do Acolhimento
-     */
-    
-    private boolean abrigado;
-    private boolean certidaoNascimento;
-    private boolean vacina;
-    
     private long idAbrigada;
-   
-    
+
     public Dependente() {
     }
 
@@ -46,7 +33,7 @@ public class Dependente {
         this.nome = nome;
         this.idade = idade;
         this.sexo = sexo;
-        this.idAbrigada = idAbrigada;     
+        this.idAbrigada = idAbrigada;
     }
 
     public long getId() {

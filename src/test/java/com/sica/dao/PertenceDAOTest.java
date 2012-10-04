@@ -91,10 +91,10 @@ public class PertenceDAOTest {
      */
     @Test
     public void testFindById() {
-//        System.out.println("findById");
-//        pertence.setId(1);
-//        Pertence result = instance.findById(pertence);
-//        assertNotNull(result);
+        System.out.println("findById");
+        pertence.setId(1);
+        Pertence result = instance.findById(pertence);
+        assertNotNull(result);
         // TODO review the generated test code and remove the default call to fail.
     }
     
