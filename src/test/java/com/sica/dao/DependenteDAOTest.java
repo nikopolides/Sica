@@ -73,7 +73,7 @@ public class DependenteDAOTest {
         instance.edita(dependente);
         assertNotNull(instance.findById(dependente));
         assertEquals("fernando",instance.findById(dependente).getNome());
-        // TODO review the generated test code and remove the default call to fail.
+        // TODO review the generated test code and remove the default call to fail.        
     }
 
     /**
@@ -91,10 +91,10 @@ public class DependenteDAOTest {
      */
     @Test
     public void testFindById() {
-        System.out.println("findById");
-        dependente.setId(1);
-        Dependente result = instance.findById(dependente);
-        assertNotNull(result);
+//        System.out.println("findById");
+//        dependente.setId(1);
+//        Dependente result = instance.findById(dependente);
+//        assertNotNull(result);
         // TODO review the generated test code and remove the default call to fail.
     }
     
