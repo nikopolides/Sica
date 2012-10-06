@@ -75,7 +75,6 @@ public class LivroControllerTest {
      * Test of lista method, of class LivroController.
      */
     
-    /*
     @Test
     public void testLista() {
         assertNotNull(livroController.lista());
@@ -84,7 +83,7 @@ public class LivroControllerTest {
     @Test
     public void testListaAutor() {
        assertNotNull(livroController.listaAutor());
-    } */
+    } 
    
      /**
      * Test of edita method, of class LivroController.
