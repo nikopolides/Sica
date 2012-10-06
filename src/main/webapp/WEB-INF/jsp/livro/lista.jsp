@@ -19,8 +19,9 @@
         <div id="livro_mensagem">
             <i style="color: greenyellow"> ${mensagem} </i>
         </div>
+        
         <h1>Lista de livros:</h1>
-        <a href="<c:url value='/livro/form'/>">Cadastrar</a><br />
+        <a href="<c:url value='/livro/form'/>">Cadastrar</a> | <a href="<c:url value='/livro/busca'/>">Buscar</a><br />
         <table id="tblist">
             <thead>
             <th>Ações</th>

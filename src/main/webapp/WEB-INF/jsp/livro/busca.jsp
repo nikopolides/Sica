@@ -28,63 +28,61 @@
         
        
        
-        <form action="<c:url value="/livro/listaResultado"/>" method="post">
+        <form action="<c:url value="/livro/listaResultado"/>" method="get">
             <h1>Pesquisar</h1>
             
-            Titulo :<input type="text" name="tituloPesquisado" value="${tituloPesquisado}"><br/>
-                                  
-                    
-            Autor :<input type="text" name="autorPesquisado" value="${autorPesquisado}"><br/>
-            
+            Titulo/Autor :<input type="text" name="termoPesquisado" value="${termoPesquisado}"><br/>
+           
             <input type="submit" value="Pesquisar" />
                         
           
         </form>
         
             <c:if test="${action != null}">
-            <h2>Resultado da Busca</h2>
-            <c:choose>
-                <c:when test="${empty livroList}">
-                    <div id="busca_vazia">
-                       <p>A busca não retornou nenhum resultado.</p>
-                   </div>    
-                </c:when>
-                
-                <c:otherwise>
-                <table id="tblist">
-                        <thead>
-                        <th>Ações</th>
-                        <th>ID</th>
-                        <th>Titulo</th>
-                        <th>Editora</th>
-                        <th>Autor</th>
-                        <th>Ano de Publicação</th>
-                        <th>Edição</th>
-                    </thead>
-                    <tbody>
-                        <c:forEach items="${livroList}" var="livro">
-                            <tr>
-                                <td>
-                                    <a href="<c:url value='/livro/deleta/${livro.id}'/>">DELETA</a>
-                                    <br>
-                                    <a href="<c:url value='/livro/edita/${livro.id}'/>">EDITA</a>
-                                    <br>
-                                    <a href="<c:url value='/livro/info/${livro.id}'/>">INFO</a>
-                                    <br>
-                                </td>
-                                <td>${livro.id}</td>
-                                <td>${livro.titulo}</td>
-                                <td>${livro.editora}</td>
-                                <td>${livro.autor}</td>
-                                <td>${livro.publicacao}</td>
-                                <td>${livro.edicao}</td>
-                            </tr>
-                        </c:forEach>
-                    </tbody>
-                </table>
-                </c:otherwise>
-            </c:choose>
-        </c:if>
+            <h3>Resultado da Busca</h3>
+
+                <c:choose>
+                    <c:when test="${empty livroList}">
+                        <div id="busca_vazia">
+                        <p>A busca não retornou nenhum resultado.</p>
+                    </div>    
+                    </c:when>
+
+                    <c:otherwise>
+                    <table id="tblist">
+                            <thead>
+                            <th>Ações</th>
+                            <th>ID</th>
+                            <th>Titulo</th>
+                            <th>Editora</th>
+                            <th>Autor</th>
+                            <th>Ano de Publicação</th>
+                            <th>Edição</th>
+                        </thead>
+                        <tbody>
+                            <c:forEach items="${livroList}" var="livro">
+                                <tr>
+                                    <td>
+                                        <a href="<c:url value='/livro/deleta/${livro.id}'/>">DELETA</a>
+                                        <br>
+                                        <a href="<c:url value='/livro/edita/${livro.id}'/>">EDITA</a>
+                                        <br>
+                                        <a href="<c:url value='/livro/info/${livro.id}'/>">INFO</a>
+                                        <br>
+                                    </td>
+                                    <td>${livro.id}</td>
+                                    <td>${livro.titulo}</td>
+                                    <td>${livro.editora}</td>
+                                    <td>${livro.autor}</td>
+                                    <td>${livro.publicacao}</td>
+                                    <td>${livro.edicao}</td>
+                                </tr>
+                            </c:forEach>
+                        </tbody>
+                    </table>
+                    </c:otherwise>
+                </c:choose>
+            </c:if>
 
  
             

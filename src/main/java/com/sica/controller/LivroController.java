@@ -47,8 +47,9 @@ public class LivroController {
         
         validator.onErrorUsePageOf(this.getClass()).form(livro.getId());
         */
-        livroDAO.adiciona(livro);        
-        result.redirectTo(this.getClass()).lista();
+        livroDAO.adiciona(livro); 
+        result.include("mensagem", "Livro criado com sucesso.");
+        result.redirectTo(this.getClass()).info(livro);
     }
     
     public List<Livro> lista(){
@@ -101,22 +102,15 @@ public class LivroController {
    
     @Path("/livro/busca")
     public void busca(){
+        
     }
     
-    ///@Path("/livro/listaResultado")
-    public List<Livro> listaResultado(String tituloPesquisado) {
-       // result.include("action", 1);
-        
-        //if(!tituloPesquisado.isEmpty()){
-            result.include("livroList",livroDAO.findByTitulo(tituloPesquisado));
-            result.redirectTo(this.getClass()).busca();
-            return livroDAO.findByTitulo(tituloPesquisado); 
-        //}
-        //else{
-          //  result.include("livroList",livroDAO.findByAutor(autorPesquisado));            
-            //result.redirectTo(this.getClass()).busca();
-           // return livroDAO.findByAutor(autorPesquisado);    
-        //}
+    @Path("/livro/listaResultado")
+    public List<Livro> listaResultado(String termoPesquisado) {
+       result.include("action", 1);
+       result.include("livroList", livroDAO.findByAutorOuTitulo(termoPesquisado));
+       result.redirectTo(this.getClass()).busca();       
+       return livroDAO.findByAutorOuTitulo(termoPesquisado);
     }
     
 }
