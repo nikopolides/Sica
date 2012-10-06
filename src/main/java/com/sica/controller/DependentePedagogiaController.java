@@ -120,7 +120,7 @@ public class DependentePedagogiaController {
     public void edita(DependentePedagogia dependentePedagogia){        
         // Redireciona para o form de cadastro
         result.include("action", 1);
-        result.include("dependentePedadogia", dao.findById(dependentePedagogia));
+        result.include("dependentePedagogia", dao.findById(dependentePedagogia));
         result.redirectTo("/dependentePedagogia/form");  
     }
     

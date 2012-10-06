@@ -19,7 +19,7 @@ camposFormAbrigada = new Array("abrigada_nome", "abrigada_cpf", "abrigada_rg", "
 					 "abrigada_telefone", "abrigada_endereco", "abrigada_cep", "abrigada_nascimento", "abrigada_estado_civil", "abrigada_profissao", 
 					 "abrigada_escolaridade", "dependenteSim", "dependenteNao");
 
-camposFormLivro = new Array();
+camposFormLivro = new Array("livro_titulo", "livro_editora", "livro_autor", "livro_publicacao", "livro_edição");
 camposFormDependentePedagogia = new Array();
 
 ALERT_SUCCESS = 0;
@@ -36,6 +36,8 @@ function validaCampos(idForm){
 			case 'edita_abrigada':
 				return validaAbrigada();
 			break;
+                        case 'cadastro)livro':
+                                return validaLivro();
 			default:
 				alert('Função (validaCampos) recebeu um parametro que não foi tratado: ' + idForm);
 			break;
@@ -57,7 +59,19 @@ function submitAbrigada(){
 		}else if(alerta == ALERT_ERROR){
 			showAlert('alert-error');
 		}else
-			alert("A FUNÇÃO 'submitAbrigada()' detectou que a FUNÇÃO 'validaCampos()' retornou um parametro INESPERADO!");
-		
-                
+			alert("A FUNÇÃO 'submitAbrigada()' detectou que a FUNÇÃO 'validaCampos()' retornou um parametro INESPERADO!");                
 }//Fim da função submitAbrigada
+
+function submitLivro(){
+    var idForm = "cadastro_livro";
+    alerta = validaCampos(idForm);
+    		if(alerta == ALERT_SUCCESS){
+			showAlert('alert-success');
+                        document.forms[idForm].submit();
+		}else if(alerta == ALERT_WARNING){
+			showAlert('alert-warning');
+		}else if(alerta == ALERT_ERROR){
+			showAlert('alert-error');
+		}else
+			alert("A FUNÇÃO 'submitAbrigada()' detectou que a FUNÇÃO 'validaCampos()' retornou um parametro INESPERADO!");
+}
