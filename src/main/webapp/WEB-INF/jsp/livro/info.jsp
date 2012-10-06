@@ -17,7 +17,8 @@
     </head>
     <body>
         <h1>Informações do livro:</h1>
-        <a href="<c:url value='/livro/form'/>">Cadastrar</a><br />
+        <a href="<c:url value='/livro/form'/>">Cadastrar</a> | 
+        <a href="<c:url value='/livro/busca'/>">Pesquisar Livro</a><br />
         <table>
             <tr>
                 <td>Ações</td><td>

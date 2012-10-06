@@ -47,8 +47,9 @@ public class LivroController {
         
         validator.onErrorUsePageOf(this.getClass()).form(livro.getId());
         */
-        livroDAO.adiciona(livro);        
-        result.redirectTo(this.getClass()).lista();
+        livroDAO.adiciona(livro); 
+        result.include("mensagem", "Livro criado com sucesso.");
+        result.redirectTo(this.getClass()).info(livro);
     }
     
     public List<Livro> lista(){
