@@ -162,7 +162,7 @@ public class DependentePedagogiaController {
     
     @Path("/dependentePedagogia/listaResultado")
     public List<DependentePedagogia> listaResultado(String nomePesquisado) {
-        result.include("action", 1);
+        result.include("action", 1);        
         result.include("dependentePedadogiaList",dao.findByName(nomePesquisado));
         result.redirectTo(this.getClass()).procura();
         return dao.findByName(nomePesquisado);    
