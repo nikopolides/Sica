@@ -6,6 +6,7 @@ package com.sica.dao;
 
 
 import com.sica.entity.Livro;
+import java.util.ArrayList;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Persistence;
@@ -22,6 +23,7 @@ public class LivroDAOTest {
     static EntityManager em;
     static Livro livro;
     static LivroDAO instance;
+    static Livro livro1;
     
     public LivroDAOTest() {
     
@@ -41,6 +43,7 @@ public class LivroDAOTest {
     
     @AfterClass
     public static void tearDownClass() throws Exception{
+
     }
 
     @Before
@@ -51,6 +54,7 @@ public class LivroDAOTest {
    
     @After
     public void tearDown() {
+        
     }
 
     /**
@@ -94,6 +98,52 @@ public class LivroDAOTest {
         assertNotNull(result);
         
     }
+
+    @Test
+    public void testFindByAutorOuTitulo() {
+      livro1 = new Livro(0,"Saconi","Nhe","Cotrim","801","Primeira Edição");   
+      instance.adiciona(livro1);
+       
+      List<Livro> results = instance.findByAutorOuTitulo("Cotrim");
+      
+      if(!em.getTransaction().isActive())
+      em.getTransaction().begin();
+      
+      livro1.setId(2);
+      instance.deleta(livro1);
+      
+      assertEquals("Cotrim", results.get(0).getAutor());
+    }  
+    
+    @Test
+    public void testFindByAutorOuTitulo2() {
+      Livro livro2 = new Livro(0,"Saconi","Nhe","Cotrim","801","Primeira Edição");   
+      instance.adiciona(livro2);
+       
+      List<Livro> results = instance.findByAutorOuTitulo("Nhe");
+      
+      if(!em.getTransaction().isActive())
+      em.getTransaction().begin();
+      
+      instance.deleta(livro2);
+      
+      assertEquals("Nhe", results.get(0).getTitulo());
+    }
+    
+    @Test
+    public void testBuscaResultandoVazio() {
+      Livro livro3 = new Livro(0,"Saconi","Nhe","Cotrim","801","Primeira Edição");   
+      instance.adiciona(livro3);
+       
+      List<Livro> results = instance.findByAutorOuTitulo("Termo");
+      
+      if(!em.getTransaction().isActive())
+      em.getTransaction().begin();
+      
+      instance.deleta(livro3);
+      
+      assertTrue(results.isEmpty());       
+    }
     
     @Test
     public void testDeleta(){
@@ -102,5 +152,7 @@ public class LivroDAOTest {
         assertNull(instance.findById(livro));
     }
     
+    
+  
         
 }

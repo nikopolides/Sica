@@ -104,19 +104,25 @@ public class LivroController {
     }
     
     ///@Path("/livro/listaResultado")
-    public List<Livro> listaResultado(String tituloPesquisado) {
-       // result.include("action", 1);
+    public List<Livro> listaResultado(String termoPesquisado) {
+       result.include("action", 1);
         
         //if(!tituloPesquisado.isEmpty()){
-            result.include("livroList",livroDAO.findByTitulo(tituloPesquisado));
-            result.redirectTo(this.getClass()).busca();
-            return livroDAO.findByTitulo(tituloPesquisado); 
+            //result.include("livroList",livroDAO.findByTitulo(tituloPesquisado));
+            //result.redirectTo(this.getClass()).busca();
+            //return livroDAO.findByTitulo(tituloPesquisado); 
         //}
         //else{
           //  result.include("livroList",livroDAO.findByAutor(autorPesquisado));            
             //result.redirectTo(this.getClass()).busca();
            // return livroDAO.findByAutor(autorPesquisado);    
         //}
+       
+       List<Livro> livroList = livroDAO.findByAutorOuTitulo(termoPesquisado);
+       result.include("livroLista");
+       result.redirectTo(this.getClass()).busca();
+       
+       return livroList;
     }
     
 }

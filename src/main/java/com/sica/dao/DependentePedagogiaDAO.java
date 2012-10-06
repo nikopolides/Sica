@@ -60,9 +60,6 @@ public class DependentePedagogiaDAO {
         
     }
     
-} //realmente precisa desse dependentePedagogia como parametro? ele não ta fazendo nada aí nao sei
-//precisa ele vai pegar os dados dai nao? //não, ele usa o método listaTodos pra trazer todos os dependentes
-//daew percorre eles pra ver quais tem 1 nome igual ao pesquisado
-//e retorna essa lista de  // aaaaa entao nao precisa dele
+} 
 
 

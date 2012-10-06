@@ -28,14 +28,11 @@
         
        
        
-        <form action="<c:url value="/livro/listaResultado"/>" method="post">
+        <form action="<c:url value="/livro/listaResultado"/>" method="get">
             <h1>Pesquisar</h1>
             
-            Titulo :<input type="text" name="tituloPesquisado" value="${tituloPesquisado}"><br/>
-                                  
-                    
-            Autor :<input type="text" name="autorPesquisado" value="${autorPesquisado}"><br/>
-            
+            Titulo/Autor :<input type="text" name="tituloPesquisado" value="${termoPesquisado}"><br/>
+           
             <input type="submit" value="Pesquisar" />
                         
           
@@ -43,14 +40,7 @@
         
             <c:if test="${action != null}">
             <h2>Resultado da Busca</h2>
-            <c:choose>
-                <c:when test="${empty livroList}">
-                    <div id="busca_vazia">
-                       <p>A busca não retornou nenhum resultado.</p>
-                   </div>    
-                </c:when>
-                
-                <c:otherwise>
+
                 <table id="tblist">
                         <thead>
                         <th>Ações</th>
@@ -82,8 +72,7 @@
                         </c:forEach>
                     </tbody>
                 </table>
-                </c:otherwise>
-            </c:choose>
+
         </c:if>
 
  
