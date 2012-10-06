@@ -38,7 +38,7 @@
                 Data Admissão: <input type="text" name="dependentePedagogia.dataAdmissao" value="${dependentePedagogia.dataAdmissao}" /><br/>
                 Abrigada: <input type="text" name="dependentePedagogia.nomeAbrigada" value="${dependentePedagogia.nomeAbrigada}" /><br/>
                 Desligamento: <input type="checkbox" name="dependentePedagogia.desligamento" value="${dependentePedagogia.desligamento}" /><br/>
-                Necessita de acompanhamento psicologico:<input type="checkbox" name="dependentePedagogia.necessitaAcompanhamentoPsicologico" value="${dependentePedagogia.necessitaAcompanhamentoPsicologic}"/><br/>
+                Necessita de acompanhamento psicologico:<input type="checkbox" name="dependentePedagogia.necessitaAcompanhamentoPsicologico" value="${dependentePedagogia.necessitaAcompanhamentoPsicologico}"/><br/>
                 
                 
                 <h1>Dados do dependente</h1>

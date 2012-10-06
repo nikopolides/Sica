@@ -26,20 +26,20 @@
         </c:if>
         <c:choose>
             <c:when test="${empty action}" >
-                <form action="<c:url value="/livro/adiciona"/>" method="post">
+                <form i="cadastro_livro" action="<c:url value="/livro/adiciona"/>" method="post">
                 </c:when>
                 <c:otherwise>
-                    <form action="<c:url value="/livro/atualizar"/>" method="post">
+                    <form id="cadastro_livro" action="<c:url value="/livro/atualizar"/>" method="post">
                     </c:otherwise>
                 </c:choose>
                 <input type="hidden" name="livro.id" value="${livro.id}" />
                 <input type="hidden" name="livro.id" value="${Id}" />
-                Titulo: <input type="text" name="livro.titulo" value="${livro.titulo}" /><br/>
-                Editora: <input type="text" name="livro.editora" value="${livro.editora}" /><br/>
-                Autor: <input type="text" name="livro.autor" value="${livro.autor}" /><br/>
-                Ano de Publicação: <input type="text" name="livro.publicacao" value="${livro.publicacao}" /><br/>
-                Edição: <input type="text" name="livro.edicao" value="${livro.edicao}" /><br/>
-                <input type="submit" value="Salvar" />
+                Titulo: <input id="livro_titulo" type="text" name="livro.titulo" value="${livro.titulo}" /><br/>
+                Editora: <input id="livro_editora" type="text" name="livro.editora" value="${livro.editora}" /><br/>
+                Autor: <input id="livro_autor" type="text" name="livro.autor" value="${livro.autor}" /><br/>
+                Ano de Publicação: <input id="livro_publicacao" type="text" name="livro.publicacao" value="${livro.publicacao}" /><br/>
+                Edição: <input type="text"id="livro_edicao" name="livro.edicao" value="${livro.edicao}" /><br/>
+                <input type="submit" value="Salvar"/>
             </form>
     </body>
 </html>
