@@ -15,7 +15,7 @@
  * 12 - abrigada_escolaridade;
  * 13 - abrigada_dependenteSim;
  * 14 - abrigada_dependenteNao.  **/
-camposFormAbrigada = new Array("abrigada_nome", "abrigada_cpf", "abrigada_rg", "abrigada_data_entrada", "abrigada_nacionalidade", "abrigada_naturalidade",
+camposFormAbrigada = new Array("abrigada_nome", "abrigada_cpf", "abrigada_rg", "abrigada_data_entrada", "abrigada_nacionalidade", "abrigada_naturalidade_estado", "abrigada_naturalidade_cidade",
 					 "abrigada_telefone", "abrigada_endereco", "abrigada_cep", "abrigada_nascimento", "abrigada_estado_civil", "abrigada_profissao", 
 					 "abrigada_escolaridade", "dependenteSim", "dependenteNao");
 
@@ -26,24 +26,25 @@ ALERT_ERROR = 2;
 /** @param idForm --> id do formulário a ser validado, em questão. **/
 function validaCampos(idForm){
 	//SWITCH de qual o tipo de formulário
-		switch(idForm){
-			case 'cadastro_abrigada':
-				return validaAbrigada();
-			break;
-			case 'edita_abrigada':
-				return validaAbrigada();
-			break;
-			default:
-				alert('Função (validaCampos) recebeu um parametro que não foi tratado: ' + idForm);
-			break;
-		}//fim do switch
+	switch(idForm){
+            case 'cadastro_abrigada':
+                return validaArray(camposFormAbrigada);
+            break;
+            case 'edita_abrigada':
+                return validaArray(camposFormAbrigada);
+            break;
+            default:
+                alert('Função (validaCampos) recebeu um parametro que não foi tratado: ' + idForm);
+            break;
+	}//fim do switch
+        
+        return null;
 }//fim da função validaCampos
 
 
 
 /** Função que prepara chama/executa tudo que deve ser feito antes e depois da submição do form da abrigada (tanto cadastro quanto edição) **/
-function submitAbrigada(){
-        var idForm = "cadastro_abrigada";
+function submitForm(idForm){
 	alerta = validaCampos(idForm);
         
 		if(alerta == ALERT_SUCCESS){
