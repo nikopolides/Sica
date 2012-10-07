@@ -25,15 +25,23 @@ public class Abrigada {
     private String endereco;
     private String cep;
     private String dataEntrada;
+    private String dataDesligamento;
     private String dataNascimento;
     private String estadoCivil;
-    private String profissao;    
+    private String profissao;
     private String nacionalidade;
     private String naturalidade;
     private String escolaridade;
     private String telefone;
 
-    public Abrigada() {
+    public Abrigada() { }
+
+    public String getDataDesligamento() {
+        return dataDesligamento;
+    }
+
+    public void setDataDesligamento(String dataDesligamento) {
+        this.dataDesligamento = dataDesligamento;
     }
     
     public String getCep() {

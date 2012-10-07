@@ -121,6 +121,12 @@
     </label>
 </div>
 <!-- Fim form direita -->
+
+<label id="abrigada_data_desligamento" class="grid_11">
+    Data desligamento (último desligamento):
+    <input id="abrigada_data_DESLIGAMENTO" type="date" name="abrigada.dataDesligamento" placeholder="Data de saída" value="${abrigada.dataDesligamento}"/>
+</label>
+
 <!-- Parte referente a pergunta se há dependentes -->
 <div id="perguntaSeHaDependente" class="grid_11 rbSica">
     <span id="form_abrigada_tel">
@@ -139,6 +145,6 @@
 </div>
 </form>
 <center>
-    <button type="button" onclick="submitForm('cadastro_abrigada')" id="submit_cadastra_abrigada" class="btn btn-info" value="Cadastrar" onclick="redireciona('relatorioPsicoSocial', 'form')"><i class="icon-ok icon-white"></i> Cadastrar </button>
+    <button type="button" onclick="submitForm('cadastro_abrigada')" id="submit_cadastra_abrigada" class="btn btn-info"><i class="icon-ok icon-white"></i> Cadastrar </button>
     <button type="button" onclick="" class="btn btn-danger" id="cancel_btn"><i class="icon-remove icon-white"></i> Cancelar </button>
 </center>
