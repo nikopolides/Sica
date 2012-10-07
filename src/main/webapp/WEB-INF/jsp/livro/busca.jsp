@@ -54,31 +54,26 @@
                     <c:otherwise>
                     <table id="tblist" class="table table-striped">
                             <thead>
-                            <th>Ações</th>
-                            <th>ID</th>
                             <th>Titulo</th>
                             <th>Editora</th>
                             <th>Autor</th>
                             <th>Ano de Publicação</th>
                             <th>Edição</th>
+                            <th></th>
                         </thead>
                         <tbody>
                             <c:forEach items="${livroList}" var="livro">
                                 <tr>
-                                    <td>
-                                        <a href="<c:url value='/livro/deleta/${livro.id}'/>" class="btn btn-mini btn-danger">Excluir</a>
-                                        <br>
-                                        <a href="<c:url value='/livro/edita/${livro.id}'/>" class="btn btn-mini">Editar</a>
-                                        <br>
-                                        <a href="<c:url value='/livro/info/${livro.id}'/>" class="btn btn-mini btn-primary">Info</a>
-                                        <br>
-                                    </td>
-                                    <td>${livro.id}</td>
                                     <td>${livro.titulo}</td>
                                     <td>${livro.editora}</td>
                                     <td>${livro.autor}</td>
                                     <td>${livro.publicacao}</td>
                                     <td>${livro.edicao}</td>
+                                    <td>
+                                        <a href="<c:url value='/livro/info/${livro.id}'/>" class="btn btn-mini btn-primary">Info</a>
+                                        <a href="<c:url value='/livro/edita/${livro.id}'/>" class="btn btn-mini">Editar</a>
+                                        <a href="<c:url value='/livro/deleta/${livro.id}'/>" class="btn btn-mini btn-danger">Excluir</a>                                      
+                                    </td>
                                 </tr>
                             </c:forEach>
                         </tbody>
