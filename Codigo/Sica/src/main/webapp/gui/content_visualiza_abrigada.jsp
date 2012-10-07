@@ -5,7 +5,7 @@
 --%>
 
 <div class="tab-pane" id="tabs1-pane6">
-    <h4>Mais Opções</h4>
+    <h4>Visualiza abrigada</h4>
     
 </div>
 
