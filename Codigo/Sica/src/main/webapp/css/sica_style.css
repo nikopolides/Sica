@@ -81,7 +81,7 @@ h4 {
 }
 
 
-#form_esquerda input{
+#form_esquerda > label > input{
 	width: 255px;
 }
 
@@ -95,3 +95,8 @@ h4 {
     margin-bottom: 7px;
     margin-left: 10px;
 }
+
+.tst {
+    width: 190px;
+}
+

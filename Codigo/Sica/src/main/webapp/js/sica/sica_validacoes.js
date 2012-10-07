@@ -8,10 +8,10 @@ function validaArray(formArray){
 	var atributosEmBranco = "";
         var array = formArray;
 
-//Percorre os atributos da array
+        //Percorre os atributos da array
 	for(var count = 0; count < array.length; count++){
 	   atributoID = array[count];
-	   atributo = document.getElementById(atributoID);
+	   var atributo = document.getElementById(atributoID);
 	   
            if(atributo == null)
                alert('O item: ' + count + ' retornou um erro.\n' + array[count]);
@@ -21,8 +21,10 @@ function validaArray(formArray){
 		   atributosEmBranco += "<br>" + count + "- " + atributoID + ";";
 		   retorno = 2; //aqui retorna 2 que é o fatal erro
 	   }//fim da validação se há atributos em branco
+           
+           //alert('Passou no for ' + count + '\n\n\n' + atributosEmBranco + '\n' + retorno);
 	}//fim do for
-	
+        
         //Passando mensagem aos alertas
 	if(retorno == ALERT_ERROR){
             alerta = document.getElementById('error-msg');
@@ -30,20 +32,8 @@ function validaArray(formArray){
         }else if(retorno == ALERT_WARNING){
            
         }
-            
-	return retorno;
+                
+        return retorno;
 }//fim da função que valida array
 
-
-/** Valida se o campo vindo no parametro está nulo **/
-function campoNulo(campoId) {
-	//Puxando o elemento
-	elemento = document.getElementById(campoId);
-	
-	//Valida se o campo está nulo
-	if(elemento.value == null || elemento.value == "")
-		return true;
-	else
-		return false;
-}//fim da função
 

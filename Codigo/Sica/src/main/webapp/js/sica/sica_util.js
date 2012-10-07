@@ -49,13 +49,13 @@ function submitForm(idForm){
         
 		if(alerta == ALERT_SUCCESS){
 			showAlert('alert-success');
-                        document.forms[idForm].submit();
+                        //document.forms[idForm].submit();
 		}else if(alerta == ALERT_WARNING){
 			showAlert('alert-warning');
 		}else if(alerta == ALERT_ERROR){
 			showAlert('alert-error');
 		}else
-			alert("A FUNÇÃO 'submitAbrigada()' detectou que a FUNÇÃO 'validaCampos()' retornou um parametro INESPERADO!");
+			alert("A FUNÇÃO 'submitForm()' detectou que a FUNÇÃO 'validaCampos()' retornou um parametro INESPERADO!"+'\nRetorno: ' + alerta);
 		
                 
 }//Fim da função submitAbrigada
