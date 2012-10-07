@@ -14,7 +14,7 @@
         <link type="text/css" rel="stylesheet" href="../css/geral.css"/>
         <script>
 
-            window.onload=function(){    window.location="gui/index.jsp";    }
+            //window.onload=function(){    window.location="gui/index.jsp";    }
             
         </script>
     </head>
