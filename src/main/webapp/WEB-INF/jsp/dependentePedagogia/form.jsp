@@ -79,60 +79,70 @@
                             Sim <input type="radio" name="dependentePedagogia.apresentaDeficuldadeAprendizagem" value="true"/>
                             Não <input type="radio" name="dependentePedagogia.apresentaDeficuldadeAprendizagem" value="false" checked="checked"/><br/>
                             
+                            <h4>Situação de saude</h4> <br/>
                             
-                            <!--
-                            <h1>Situação de saude</h1>
                             Portador de necesidades especiais?<br/>
-                            Não <input type="radio" name="dependentePedagogia.portadorNecessidadeEspeciais" value="nao" checked <c:if test="${dependentePedagogia.portadorNecessidadeEspeciais == 'nao'}"> checked="checked"</c:if>><br/>
-                            Sim <input type="radio" name="dependentePedagogia.portadorNecessidadeEspeciais" value="sim" <c:if test="${dependentePedagogia.portadorNecessidadeEspeciais == 'sim'}"> checked="checked" </c:if>>
-                            Visual<input type="checkbox" name="dependentePedagogia.portadorNecessidadeEspeciaisSim" value="visual" <c:if test="${dependentePedagogia.portadorNecessidadeEspeciaisSim == 'visual'}"> checked="checked" </c:if>>
-                            Auditiva/de fala <input type="checkbox" name="dependentePedagogia.portadorNecessidadeEspeciaisSim" value="auditivaDeFala" <c:if test="${dependentePedagogia.portadorNecessidadeEspeciaisSim == 'auditivaDeFala'}"> checked="checked" </c:if>>   
-                            Física <input type="checkbox" name="dependentePedagogia.portadorNecessidadeEspeciaisSim" value="fisica" <c:if test="${dependentePedagogia.portadorNecessidadeEspeciaisSim == 'fisica'}"> checked="checked" </c:if>>
-                            Mental <input type="checkbox" name="dependentePedagogia.portadorNecessidadeEspeciaisSim" value="mental" <c:if test="${dependentePedagogia.portadorNecessidadeEspeciaisSim == 'mental'}"> checked="checked" </c:if>/><br/>
+                            Não <input type="radio" name="dependentePedagogia.portadorNecessidadeEspeciais" value="false" />
+                            Sim <input type="radio" name="dependentePedagogia.portadorNecessidadeEspeciais" value="true" checked="checked"/><br/>
+                            
+                            Visual<input type="checkbox" name="dependentePedagogia.portadorNecessidadeEspeciaisSim" value="${dependentePedagogia.portadorNecessidadeEspeciaisSim}" />
+                            Auditiva/de fala <input type="checkbox" name="dependentePedagogia.portadorNecessidadeEspeciaisSim" value="${dependentePedagogia.portadorNecessidadeEspeciaisSim }"/>    
+                            Física <input type="checkbox" name="dependentePedagogia.portadorNecessidadeEspeciaisSim" value="${dependentePedagogia.portadorNecessidadeEspeciaisSim }"/> 
+                            Mental <input type="checkbox" name="dependentePedagogia.portadorNecessidadeEspeciaisSim" value="${dependentePedagogia.portadorNecessidadeEspeciaisSim }"/><br/>
             
                             Histórico de acompanhamento psiquiátrico? <input type="text" name="dependentePedagogia.historicoAcompanhamentoPsiquiatrico" value="${dependentePedagogia.historicoAcompanhamentoPsiquiatrico}" /><br/>
-            
+                            
                             Usa drogas líciitas/Ilícitas?<br/>
-                            Não <input type="radio" name="dependentePedagogia.usaDrogas" value="nao"checked <c:if test="${dependentePedagogia.usaDrogas == 'nao'}"> checked="checked"</c:if>><br/>
-                            Sim <input type="radio" name="dependentePedagogia.usaDrogas" value="sim" <c:if test="${dependentePedagogia.usaDrogas == 'sim'}"> checked="checked" </c:if>>
+                            
+                            Sim <input type="radio" name="dependentePedagogia.usaDrogas" value="true" />
+                            Não <input type="radio" name="dependentePedagogia.usaDrogas" value="false" checked="checked" /><br/>
                             Quais? <input type="text" name="dependentePedagogia.qualDroga" value="${dependentePedagogia.qualDroga}" /><br/>
                             Com que frequência? <input type="text" name="dependentePedagogia.frequenciaUsoDrogas" value="${dependentePedagogia.frequenciaUsoDrogas}" /><br/>
-            
-                            Possui alguma doença?<br/>
-                            Não <input type="radio" name="dependentePedagogia.possuiDoenca" value="nao" checked <c:if test="${dependentePedagogia.possuiDoenca == 'nao'}"> checked="checked"</c:if>><br/>
-                            Sim <input type="radio" name="dependentePedagogia.possuiDoenca" value="sim" <c:if test="${dependentePedagogia.possuiDoenca == 'sim'}"> checked="checked" </c:if>>
+                           
+           
+                            Possui alguma doença?<br/>                
+                            Sim <input type="radio" name="dependentePedagogia.possuiDoenca" value="sim" <c:if test="${dependentePedagogia.possuiDoenca == sim}"> checked="checked"</c:if>>
+                            Não <input type="radio" name="dependentePedagogia.possuiDoenca" value="nao" checked <c:if test="${dependentePedagogia.possuiDoenca == nao}"> checked="checked"</c:if>><br/>
                             tipo de doença:<input type="text" name="dependentePedagogia.tipoDoenca" value="${dependentePedagogia.tipoDoenca}"/><br/>
+                           
             
                             Possui alergias?<br/>
-                            Não <input type="radio" name="dependentePedagogia.possuiAlergia" value="nao" checked<c:if test="${dependentePedagogia.possuiAlergia == 'nao'}"> checked="checked"</c:if>><br/>
-                            Sim <input type="radio" name="dependentePedagogia.possuiAlergia" value="sim" <c:if test="${dependentePedagogia.possuiAlergia == 'sim'}"> checked="checked" </c:if>>
+                            Sim <input type="radio" name="dependentePedagogia.possuiAlergia" value="sim" <c:if test="${dependentePedagogia.possuiAlergia == sim}"> checked="checked" </c:if>>
+                            Não <input type="radio" name="dependentePedagogia.possuiAlergia" value="nao" checked<c:if test="${dependentePedagogia.possuiAlergia == nao}"> checked="checked"</c:if>><br/>
                             Medicamentos:<input type="text" name="dependentePedagogia.medicamentoAlergico" value="${dependentePedagogia.medicamentoAlergico}"/><br/>
-            
+                            
+             
                             Faz uso de medicação controlada?<br/>
-                            Não <input type="radio" name="dependentePedagogia.medicacaoControlada" value="nao" checked<c:if test="${dependentePedagogia.medicacaoControlada == 'nao'}"> checked="checked"</c:if>><br/>
-                            Sim <input type="radio" name="dependentePedagogia.medicacaoControlada" value="sim" <c:if test="${dependentePedagogia.medicacaoControlada == 'sim'}"> checked="checked" </c:if>>
+                            Sim <input type="radio" name="dependentePedagogia.medicacaoControlada" value="sim" <c:if test="${dependentePedagogia.medicacaoControlada == sim}"> checked="checked" </c:if>>
+                            Não <input type="radio" name="dependentePedagogia.medicacaoControlada" value="nao" checked<c:if test="${dependentePedagogia.medicacaoControlada == nao}"> checked="checked"</c:if>><br/>
                             Medicamentos:<input type="text" name="dependentePedagogia.medicamentoControlado" value="${dependentePedagogia.medicamentoControlado}"/><br/>
             
-            
-                            <h1>Situação de violência com os dependentes</h1>
+           
+                            <h4>Situação de violência com os dependentes</h4><br/>
+                            
                             Nº do Boletim de ocorrência:<input type="text" name="dependentePedagogia.nBoletimOcorrencia" value="${dependentePedagogia.nBoletimOcorrencia}"/><br/>
                             Orgão de encaminhamento:<input type="text" name="dependentePedagogia.orgaoDeEncaminhamento" value="${dependentePedagogia.orgaoDeEncaminhamento}"/><br/>
             
+                            
                             Tipos de violenca ja sofrida:<br/>
-                            Física <input type="checkbox" name="dependentePedagogia.violenciaFisica" value="fisica"  <c:if test="${dependentePedagogia.violenciaFisica == 'fisica'}">checked ="checked"</c:if>>
+                            Física <input type="checkbox" name="dependentePedagogia.violenciaFisica" value="${dependentePedagogia.violenciaFisica}" /><br/>
                             de que forma? <input type="text" name="dependentePedagogia.qualFormaFisica" value="${dependentePedagogia.qualFormaFisica}"/><br/>
-                            Possui lesão aparente? <input type="text" name="dependentePedagogia.lesaoAparente" value="${dependentePedagogia.lesaoAparente}"/><br/>
+                            Possui lesão aparente? <input type="text" name="dependentePedagogia.lesaoAparente" value="${dependentePedagogia.lesaoAparente}"/><br/>              
                             Encaminhada ao IML? <input type="text" name="dependentePedagogia.encaminhadaIMLFisica" value="${dependentePedagogia.encaminhadaIMLFisica}"/><br/>
-                            Sexual <input type="checkbox" name="dependentePedagogia.violenciaSexual" value="sexual" <c:if test="${dependentePedagogia.violenciaSexual == 'sexual'}">checked ="checked"</c:if>>
+                           
+                            Sexual <input type="checkbox" name="dependentePedagogia.violenciaSexual" value="${dependentePedagogia.violenciaSexual}"/><br/>
                             de que forma? <input type="text" name="dependentePedagogia.qualFormaSexual" value="${dependentePedagogia.qualFormaSexual}"/><br/>
                             Encaminhada ao IML? <input type="text" name="dependentePedagogia.encaminhadaIMLSexual" value="${dependentePedagogia.encaminhadaIMLSexual}"/><br/>
-                            Patrimonial: <input type="checkbox" name="dependentePedagogia.violenciaPatrimonial" value="patrimonial" <c:if test="${dependentePedagogia.violenciaPatrimonial == 'patrimonial'}">checked ="checked"</c:if>>
+                           
+                            Patrimonial: <input type="checkbox" name="dependentePedagogia.violenciaPatrimonial" value="${dependentePedagogia.violenciaPatrimonial}"/><br/>
                             de que forma? <input type="text" name="dependentePedagogia.qualFormaPatrimonial" value="${dependentePedagogia.qualFormaPatrimonial}"/><br/>
-                            Moral: <input type="checkbox" name="dependentePedagogia.violenciaMoral" value="moral" <c:if test="${dependentePedagogia.violenciaMoral == 'moral'}">checked ="checked"</c:if>>
+                            
+                            Moral: <input type="checkbox" name="dependentePedagogia.violenciaMoral" value="${dependentePedagogia.violenciaMoral}"/><br/>
                             de que forma? <input type="text" name="dependentePedagogia.qualFormaMoral" value="${dependentePedagogia.qualFormaMoral}"/><br/>
-                            Psicológica: <input type="checkbox" name="dependentePedagogia.violenciaPsicologica" value="psicologica" <c:if test="${dependentePedagogia.violenciaPsicologica == 'psicologica'}">checked ="checked"</c:if>>
+                            
+                            Psicológica: <input type="checkbox" name="dependentePedagogia.violenciaPsicologica" value="${dependentePedagogia.violenciaPsicologica}"/><br/>
                             de que forma? <input type="text" name="dependentePedagogia.qualFormaPsicologica" value="${dependentePedagogia.qualFormaPsicologica}"/><br/>
-            
+             <!--
                             Agressor:<input type="text" name="dependentePedagogia.nomeAgressor" value="${dependentePedagogia.nomeAgressor}"/><br/>
                             Relação/grau de parentesco com a criança/adolescente:<input type="text" name="dependentePedagogia.relacaoDependente" value="${dependentePedagogia.relacaoDependente}"/><br/>
                             Foi a primeira agressão?<br/>
