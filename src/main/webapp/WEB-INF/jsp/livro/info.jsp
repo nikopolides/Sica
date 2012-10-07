@@ -13,47 +13,49 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title>JSP Page</title>
-        <link type="text/css" rel="stylesheet" href="../css/geral.css"/>
-        <link type="text/css" rel="stylesheet" href="../css/bootstrap.min.css"/>
+        <link type="text/css" rel="stylesheet" href="<c:url value="/css/geral.css"/>"/>
     </head>
     <body>
-        <h2>Informações do livro:</h2>
+        <div class="principal">
 
-        <table>
-            <tr>
-                <td>ID</td><td>${livro.id}</td>
-            </tr>
-            <tr>
-                <td>Título</td><td>${livro.titulo}</td>
-            </tr>
-            <tr>
-                <td>Editora</td><td>${livro.editora}</td>
-            </tr>
-            <tr>
-                <td>Autor</td><td>${livro.autor}</td>
-            </tr>             
-            <tr>
-                <td>Ano de Publicação</td><td>${livro.publicacao}</td>
-            </tr>
-            <tr>
-                <td>Edição</td><td>${livro.edicao}</td>
-            </tr>
-            <tr>
-                <td>Ações</td>
-                <td>
-                    <a href="<c:url value='/livro/edita/${livro.id}'/>" class="btn">Editar</a>
-                    <a href="<c:url value='/livro/deleta/${livro.id}'/>" class="btn btn-danger">Excluir</a>                    
-                </td>
-            </tr>
+            <h2>Informações do livro</h2>
 
-        </table>
+            <table>
+                <tr>
+                    <td>ID</td><td>${livro.id}</td>
+                </tr>
+                <tr>
+                    <td>Título</td><td>${livro.titulo}</td>
+                </tr>
+                <tr>
+                    <td>Editora</td><td>${livro.editora}</td>
+                </tr>
+                <tr>
+                    <td>Autor</td><td>${livro.autor}</td>
+                </tr>             
+                <tr>
+                    <td>Ano de Publicação</td><td>${livro.publicacao}</td>
+                </tr>
+                <tr>
+                    <td>Edição</td><td>${livro.edicao}</td>
+                </tr>
+                <tr>
+                    <td>Ações</td>
+                    <td>
+                        <a href="<c:url value='/livro/edita/${livro.id}'/>" class="btn btn-mini">Editar</a>
+                        <a href="<c:url value='/livro/deleta/${livro.id}'/>" class="btn btn-danger btn-mini">Excluir</a>                    
+                    </td>
+                </tr>
+
+            </table>
 
 
-        <div class="actions">
-            <p>
-                <a href="<c:url value='/livro/form'/>" class="btn btn-mini btn-primary">Cadastrar</a>  
-                <a href="<c:url value='/livro/busca'/>" class="btn btn-mini">Buscar</a>      
-            </p>
+            <div class="actions">
+                <p>
+                    <a href="<c:url value='/livro/form'/>" class="btn btn-primary">Cadastrar</a>  
+                    <a href="<c:url value='/livro/busca'/>" class="btn">Buscar</a>      
+                </p>
+            </div>
         </div>
     </body>
 </html>

@@ -14,7 +14,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title>JSP Page</title>
-        <link type="text/css" rel="stylesheet" href="../../css/geral.css"/>
+        <link type="text/css" rel="stylesheet" href="<c:url value="/css/geral.css"/>"/>
     </head>
     <body>
         <c:if test="${errors != null}">

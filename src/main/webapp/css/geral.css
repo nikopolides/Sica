@@ -11,3 +11,26 @@
 .title{
     margin-bottom: 0.5em;
 }
+
+#form-top {
+    padding-top: 30px;
+    padding-bottom: 20px;
+}
+
+.actions {
+    padding-top:30px;
+}
+
+.dependentePedagogia-form {
+    max-width: 500px;
+    text-align: right;
+}
+
+#busca_vazia {
+    padding: 25px;
+}
+
+.principal {
+    padding-left: 5px;
+    pagging-top: 10px;
+}

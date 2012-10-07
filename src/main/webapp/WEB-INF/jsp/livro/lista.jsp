@@ -13,11 +13,12 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title>JSP Page</title>
-        <link type="text/css" rel="stylesheet" href="../css/geral.css"/>
+        <link type="text/css" rel="stylesheet" href="<c:url value="/css/geral.css"/>"/>
     </head>
     <body>
+        <div class="principal">
         <div id="livro_mensagem">
-            <i style="color: greenyellow"> ${mensagem} </i>
+            <i style="color: green"> ${mensagem} </i>
         </div>
 
         <h2>Lista de livros:</h2>
@@ -31,7 +32,6 @@
                 <table id="livro_lista" class="table table-striped">
                     <thead>
                         <tr>
-                            <th>ID</th>
                             <th>Titulo</th>
                             <th>Editora</th>
                             <th>Autor</th>
@@ -46,7 +46,6 @@
                     <tbody>
                         <c:forEach items="${livroList}" var="livro">
                             <tr>
-                                <td>${livro.id}</td>
                                 <td>${livro.titulo}</td>
                                 <td>${livro.editora}</td>
                                 <td>${livro.autor}</td>
@@ -74,6 +73,6 @@
                 <a href="<c:url value='/livro/busca'/>" class="btn">Buscar</a><br />        
             </p>
         </div>
-            
+    </div>    
     </body>
 </html>
