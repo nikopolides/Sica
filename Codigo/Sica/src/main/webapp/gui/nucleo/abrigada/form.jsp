@@ -139,7 +139,7 @@
     </span>
 </div>
 <center>
-    <button type="button" onclick="submitAbrigada()" id="submit_cadastra_abrigada" class="btn btn-info" value="Cadastrar" onclick="redireciona('relatorioPsicoSocial', 'form')"><i class="icon-ok icon-white"></i> Cadastrar </button>
+    <button type="button" onclick="submit('cadastro_abrigada')" id="submit_cadastra_abrigada" class="btn btn-info" value="Cadastrar" onclick="redireciona('relatorioPsicoSocial', 'form')"><i class="icon-ok icon-white"></i> Cadastrar </button>
     <button type="button" onclick="" class="btn btn-danger" id="cancel_btn"><i class="icon-remove icon-white"></i> Cancelar </button>
 </center>
 
