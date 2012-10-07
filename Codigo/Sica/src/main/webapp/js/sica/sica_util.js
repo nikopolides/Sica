@@ -49,7 +49,7 @@ function submitForm(idForm){
         
 		if(alerta == ALERT_SUCCESS){
 			showAlert('alert-success');
-                        //document.forms[idForm].submit();
+                        document.forms[idForm].submit();
 		}else if(alerta == ALERT_WARNING){
 			showAlert('alert-warning');
 		}else if(alerta == ALERT_ERROR){
