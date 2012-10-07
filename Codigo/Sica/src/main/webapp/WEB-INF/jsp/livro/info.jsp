@@ -16,27 +16,33 @@
         <title>JSP Page</title>
     </head>
     <body>
-        <h1>Informações da abrigada:</h1>
-        <a href="<c:url value='/abrigada/form'/>">Cadastrar</a><br />
+        <h1>Informações do livro:</h1>
+        <a href="<c:url value='/livro/form'/>">Cadastrar</a><br />
         <table>
             <tr>
                 <td>Ações</td><td>
-                    <a href="<c:url value='/abrigada/deleta/${abrigada.id}'/>">DELETA</a>
-                    | <a href="<c:url value='/abrigada/edita/${abrigada.id}'/>">EDITA</a>
+                    <a href="<c:url value='/livro/deleta/${livro.id}'/>">DELETA</a>
+                    | <a href="<c:url value='/livro/edita/${livro.id}'/>">EDITA</a>
                 </td>
             <tr>
-                <td>ID</td><td>${abrigada.id}</td>
+                <td>ID</td><td>${livro.id}</td>
             </tr>
             <tr>
-                <td>Nome</td><td>${abrigada.nome}</td>
+                <td>Título</td><td>${livro.titulo}</td>
             </tr>
             <tr>
-                <td>Telefone</td><td>${abrigada.telefone}</td>
+                <td>Editora</td><td>${livro.editora}</td>
             </tr>
             <tr>
-                <td>Endereco</td><td>${abrigada.endereco}</td>
+                <td>Autor</td><td>${livro.autor}</td>
             </tr>             
-
+            <tr>
+                <td>Ano de Publicação</td><td>${livro.publicacao}</td>
+            </tr>
+            <tr>
+                <td>Edição</td><td>${livro.edicao}</td>
+            </tr>
+            
         </table>
     </body>
 </html>

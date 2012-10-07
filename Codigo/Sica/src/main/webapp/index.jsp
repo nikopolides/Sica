@@ -5,24 +5,14 @@
 
 <html>
     <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <title>SICA</title>
-        <link type="text/css" rel="stylesheet" href="css/geral.css"/>
+        <script>
+
+//            window.onload=function(){    window.location="gui/index.jsp";    }
+              window.onload=function(){    window.location="abrigada/lista";    }
+            
+        </script>
     </head>
     <body>
-        <div class="container-fluid">
-            <div class="well">
-                <div class="row offset1">
-                    <h1 class="title">Sistema Integrado da Casa Abrigo</h1>                        
-                </div>
-
-                <div class="row offset1">
-                    <div class="btn-group">
-                        <a class="btn btn-large btn-primary" href="<c:url value='/abrigada/form'/>">Cadastrar Abrigada</a>
-                        <a class="btn btn-large btn-primary" href="<c:url value='/abrigada/lista'/>">Ver lista de Abrigada</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+          
     </body>
 </html>

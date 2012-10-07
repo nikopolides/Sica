@@ -1,0 +1,97 @@
+#abrigada_nome {
+	margin-left: 67px;
+}
+
+#v_abrigada_adiciona {
+    display: none;
+}
+
+#btns_form_abrigada {
+    
+}
+
+#abrigada_cpf {
+	margin-left: 74px;
+}
+
+
+#abrigada_rg {
+	margin-left: 82px;
+}
+
+
+#abrigada_nacionalidade {
+	margin-left: 14px;
+}
+
+
+#abrigada_naturalidade {
+	margin-left: 23px;
+        width: 268px;
+}
+
+
+#cadastro_abrigada_form {
+	padding: 8px;
+}
+
+
+#abrigada_endereco {
+	margin-left: 66px;
+}
+
+
+#abrigada_cep {
+	margin-left: 98px;
+}
+
+
+#abrigada_nascimento {
+	
+}
+
+select {
+	width: 300px;
+}
+
+#abrigada_estado_civil {
+	margin-left: 56px;
+}
+
+
+#abrigada_profissao {
+	margin-left: 68px;
+}
+
+
+#abrigada_escolaridade {
+	margin-left: 45px;
+}
+
+#abrigada_telefone {
+    margin-left: 47px;
+}
+
+#abrigada_celular {
+    margin-left: 82px;
+}
+
+.tst {
+    background: #000;
+}
+#perguntaSeHaDependente {
+    margin: 20px;
+    margin-top: 30px;
+}
+
+#abrigada_telefone{
+    margin-left: 2px;
+    margin-right: 25px;
+    width: 372px;
+    height: 80px;
+}
+
+#form_abrigada_dep {
+    float: right;
+    margin-top: 36px;
+}

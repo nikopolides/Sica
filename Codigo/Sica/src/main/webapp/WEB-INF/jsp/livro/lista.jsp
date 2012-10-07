@@ -16,6 +16,9 @@
         <link type="text/css" rel="stylesheet" href="../css/geral.css"/>
     </head>
     <body>
+        <div id="livro_mensagem">
+            <i style="color: blue"> ${mensagem} </i>
+        </div>
         <h1>Lista de livros:</h1>
         <a href="<c:url value='/livro/form'/>">Cadastrar</a><br />
         <table id="tblist">
@@ -26,6 +29,7 @@
             <th>Editora</th>
             <th>Autor</th>
             <th>Ano de Publicação</th>
+            <th>Edição</th>
         </thead>
         <tbody>
             <c:forEach items="${livroList}" var="livro">
@@ -35,12 +39,15 @@
                         <br>
                         <a href="<c:url value='/livro/edita/${livro.id}'/>">EDITA</a>
                         <br>
+                        <a href="<c:url value='/livro/info/${livro.id}'/>">INFO</a>
+                        <br>
                     </td>
                     <td>${livro.id}</td>
                     <td>${livro.titulo}</td>
                     <td>${livro.editora}</td>
                     <td>${livro.autor}</td>
                     <td>${livro.publicacao}</td>
+                    <td>${livro.edicao}</td>
                 </tr>
             </c:forEach>
         </tbody>

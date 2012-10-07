@@ -24,17 +24,27 @@ public class Livro {
     private String titulo;
     private String autor;
     private String publicacao;
+    private String edicao;
 
     public Livro() {
     }
     
     
-    public Livro(long id, String editora, String titulo, String autor, String publicacao) {
+    public Livro(long id, String editora, String titulo, String autor, String publicacao, String edicao) {
         this.id = id;
         this.editora = editora;
         this.titulo = titulo;
         this.autor = autor;
         this.publicacao = publicacao;
+        this.edicao = edicao;
+    }
+    
+    public String getEdicao() {
+        return edicao;
+    }
+
+    public void setEdicao(String edicao) {
+        this.edicao = edicao;
     }
 
     public String getAutor() {

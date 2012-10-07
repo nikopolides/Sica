@@ -32,19 +32,10 @@ public class Abrigada {
     private String naturalidade;
     private String escolaridade;
     private String telefone;
-    private String celular;
 
     public Abrigada() {
     }
-
-    public String getCelular() {
-        return celular;
-    }
-
-    public void setCelular(String celular) {
-        this.celular = celular;
-    }
-
+    
     public String getCep() {
         return cep;
     }
@@ -159,7 +150,7 @@ public class Abrigada {
 
     @Override
     public String toString() {
-        return "Abrigada{" + "id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", rg=" + rg + ", endereco=" + endereco + ", cep=" + cep + ", dataEntrada=" + dataEntrada + ", dataNascimento=" + dataNascimento + ", estadoCivil=" + estadoCivil + ", profissao=" + profissao + ", nacionalidade=" + nacionalidade + ", naturalidade=" + naturalidade + ", escolaridade=" + escolaridade + ", telefone=" + telefone + ", celular=" + celular + '}';
+        return "Abrigada{" + "id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", rg=" + rg + ", endereco=" + endereco + ", cep=" + cep + ", dataEntrada=" + dataEntrada + ", dataNascimento=" + dataNascimento + ", estadoCivil=" + estadoCivil + ", profissao=" + profissao + ", nacionalidade=" + nacionalidade + ", naturalidade=" + naturalidade + ", escolaridade=" + escolaridade + ", telefone=" + telefone + "}";
     }
     
    

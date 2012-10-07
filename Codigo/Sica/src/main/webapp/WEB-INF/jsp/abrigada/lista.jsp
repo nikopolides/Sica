@@ -4,38 +4,21 @@
     Author     : Leonn Ferreira
 --%>
 
-<%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
 
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <title>JSP Page</title>
-        <link type="text/css" rel="stylesheet" href="../css/geral.css"/>
-    </head>
-    <body>
-        <h1>Lista de abrigadas:</h1>
-        <a href="<c:url value='/abrigada/form'/>">Cadastrar</a><br />
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+        
+        <jsp:include page="../../../gui/index.jsp"></jsp:include>
+        
+
+<div class="tab-pane grid_12 alpha omega" id="tabs1-pane1">
+    <h4>Lista de abrigadas</h4>         
+
         <table id="tblist">
             <thead>
             <th>Ações</th>
             <th>ID</th>
             <th>Nome</th>
             <th>Cpf</th>
-            <th>Rg</th>
-            <th>Endere&ccedil;o</th>
-            <th>Cep</th>
-            <th>Data de Entrada</th>
-            <th>Data de Nascimento</th>
-            <th>Estado Civil</th>
-            <th>Profiss&atilde;o</th>
-            <th>Nacionalidade</th>
-            <th>Naturalidade</th>
-            <th>Escolaridade</th>
-            <th>Telefone</th>
-            <th>Celular</th>
         </thead>
         <tbody>
             <c:forEach items="${abrigadaList}" var="abrigada">
@@ -57,21 +40,10 @@
                     <td>${abrigada.id}</td>
                     <td>${abrigada.nome}</td>
                     <td>${abrigada.cpf}</td>
-                    <td>${abrigada.rg}</td>
-                    <td>${abrigada.endereco}</td>
-                    <td>${abrigada.cep}</td>
-                    <td>${abrigada.dataEntrada}</td>
-                    <td>${abrigada.dataNascimento}</td>
-                    <td>${abrigada.estadoCivil}</td>
-                    <td>${abrigada.profissao}</td>
-                    <td>${abrigada.nacionalidade}</td>
-                    <td>${abrigada.naturalidade}</td>
-                    <td>${abrigada.escolaridade}</td>
-                    <td>${abrigada.telefone}</td>
-                    <td>${abrigada.celular}</td>
                 </tr>
             </c:forEach>
         </tbody>
     </table>
-</body>
-</html>
+
+</div>
+        

@@ -6,6 +6,8 @@ package com.sica.dao;
 
 import br.com.caelum.vraptor.ioc.Component;
 import com.sica.entity.Livro;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.Query;
@@ -23,6 +25,9 @@ public class LivroDAO {
     }
     
     public void adiciona(Livro livro){
+        if(!entityManager.getTransaction().isActive()){
+            entityManager.getTransaction().begin();
+        }
         entityManager.persist(livro);
         entityManager.getTransaction().commit();    
     }
@@ -35,8 +40,31 @@ public class LivroDAO {
     public List<Livro> listaTodos(){
         Query query = entityManager.createQuery("from Livro");
         List<Livro> lista = query.getResultList();
+        Collections.sort(lista, new Comparator<Livro>(){
+        
+            @Override
+        public int compare (Livro l1, Livro l2){
+            return l1.getTitulo().compareTo(l2.getTitulo());
+                          
+        }
+    });
         //entityManager.close();
         return lista;
+    }
+    
+    public List<Livro> listaAutor(){
+        Query query = entityManager.createQuery("from Livro");
+        List<Livro> listaAutor = query.getResultList();
+        Collections.sort(listaAutor, new Comparator<Livro>(){
+        
+            @Override
+        public int compare (Livro l1, Livro l2){
+            return l1.getAutor().compareTo(l2.getAutor());
+                          
+        }
+    });
+        //entityManager.close();
+        return listaAutor;
     }
     
     public void deleta(Livro livro){
@@ -47,6 +75,17 @@ public class LivroDAO {
     
     public Livro findById(Livro livro){
         return entityManager.find(Livro.class, livro.getId());
+    }
+    
+    public List<Livro> findByTitulo(String tituloPesquisado){
+        Query query = entityManager.createQuery("from Livro where titulo like '%"+tituloPesquisado+"%'");
+        List <Livro>lista=query.getResultList();
+        return lista;        
+    }
+    public List<Livro> findByAutor(String autorPesquisado){
+        Query query = entityManager.createQuery("from Livro where autor like '%"+autorPesquisado+"%'");
+        List <Livro>lista=query.getResultList();
+        return lista;        
     }
     
 }

@@ -33,10 +33,12 @@
                     </c:otherwise>
                 </c:choose>
                 <input type="hidden" name="livro.id" value="${livro.id}" />
+                <input type="hidden" name="livro.id" value="${Id}" />
                 Titulo: <input type="text" name="livro.titulo" value="${livro.titulo}" /><br/>
                 Editora: <input type="text" name="livro.editora" value="${livro.editora}" /><br/>
                 Autor: <input type="text" name="livro.autor" value="${livro.autor}" /><br/>
                 Ano de Publicação: <input type="text" name="livro.publicacao" value="${livro.publicacao}" /><br/>
+                Edição: <input type="text" name="livro.edicao" value="${livro.edicao}" /><br/>
                 <input type="submit" value="Salvar" />
             </form>
     </body>

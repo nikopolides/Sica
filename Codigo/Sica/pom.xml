@@ -8,8 +8,8 @@
 
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
-        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <netbeans.hint.deploy.server>gfv3ee6</netbeans.hint.deploy.server>
+        <project.build.sourceEncoding>ISO-8859-1</project.build.sourceEncoding>
+        <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
     </properties>
 
     <dependencies>
@@ -207,5 +207,5 @@
         </repository>
     </repositories>
     <artifactId>SICA</artifactId>
-    <name>SICA</name>
+    <name>SICATonJr</name>
 </project>
