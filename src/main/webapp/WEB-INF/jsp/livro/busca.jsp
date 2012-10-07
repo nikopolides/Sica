@@ -17,6 +17,7 @@
         <link type="text/css" rel="stylesheet" href="<c:url value="/css/geral.css"/>"/>
     </head>
     <body>
+        <div class="principal">
         <c:if test="${errors != null}">
             <div id="erro">
                 Erros:<br />
@@ -26,7 +27,7 @@
             </div>
         </c:if>
         
-        <div class="principal">
+        
         <h2>Pesquisar</h2><br/><br/>
        
         <form action="<c:url value="/livro/listaResultado"/>" method="get" class="form-search">
