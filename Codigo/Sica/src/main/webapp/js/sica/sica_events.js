@@ -26,8 +26,8 @@ function iluminarTela(){
 
 //overflow-y:hidden --> Usado para esconder a barra de rolagem com o JS.
 function showAlert(idAlert){
-	escurecerTela();
-	document.getElementById(idAlert).style.display="block";
+        escurecerTela();
+        document.getElementById(idAlert).style.display="block";
         document.getElementById(idAlert).style.visibility="visible";
 }
 

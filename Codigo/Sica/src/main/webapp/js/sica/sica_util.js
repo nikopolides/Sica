@@ -34,7 +34,7 @@ function validaCampos(idForm){
                 return validaArray(camposFormAbrigada);
             break;
             default:
-                alert('Função (validaCampos) recebeu um parametro que não foi tratado: ' + idForm);
+                showAlert('warning-msg');
             break;
 	}//fim do switch
         
@@ -49,13 +49,17 @@ function submitForm(idForm){
         
 		if(alerta == ALERT_SUCCESS){
 			showAlert('alert-success');
-                        document.forms[idForm].submit();
+                        setTimeout(sub, 4000);
+                        function sub(){ document.forms[idForm].submit(); }
 		}else if(alerta == ALERT_WARNING){
 			showAlert('alert-warning');
 		}else if(alerta == ALERT_ERROR){
 			showAlert('alert-error');
-		}else
-			alert("A FUNÇÃO 'submitForm()' detectou que a FUNÇÃO 'validaCampos()' retornou um parametro INESPERADO!"+'\nRetorno: ' + alerta);
+		}else{
+                        showAlert('alert-warning');
+                        setTimeout(sub, 3000);
+                        function sub(){ document.forms[idForm].submit(); }
+                }//fim do else
 		
                 
 }//Fim da função submitAbrigada
