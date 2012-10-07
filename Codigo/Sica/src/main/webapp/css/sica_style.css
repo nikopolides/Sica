@@ -1,6 +1,7 @@
 @import url("abrigada_form_campos.css");
 @import url("relatorio_ps_form_campos.css");
 @import url("alerts.css");
+@import url("listagem.css");
 
 #busca_abrigada {
     margin-top: 30px;

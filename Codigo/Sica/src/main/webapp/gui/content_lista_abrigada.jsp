@@ -8,12 +8,12 @@
     <h4>Lista de abrigadas</h4>         
 
     <center> 
-            <table id="tblist" border="1" class="grid_11">
+            <table id="tblist" border="1" class="table table-hover alpha grid_11 omega ">
                 <thead>
-                <th>Ações</th>
-                <th>ID</th>
-                <th>Nome</th>
-                <th>Telefone</th>
+                <th class="lista_abriga_nome_coluna">Ações que podem ser exercidas para cada usuário</th>
+                <th class="lista_abriga_nome_coluna">ID</th>
+                <th class="lista_abriga_nome_coluna">Nome</th>
+                <th class="lista_abriga_nome_coluna">Telefone</th>
             </thead>
             <tbody>
                 <c:forEach items="${abrigadaList}" var="abrigada">
@@ -56,9 +56,9 @@
                             <i class="icon-folder-open" title="VISUALIZA ACOMPANHAMENTO ABRIGADA" alt="VISUALIZA ACOMPANHAMENTO ABRIGADA"><a href="<c:url value='/acompanhamentoAbrigada/lista/${abrigada.id}?nome=${abrigada.nome}'/>"></a></i>
 
                         </td>
-                        <td>${abrigada.id}</td>
-                        <td>${abrigada.nome}</td>
-                        <td>${abrigada.telefone}</td>
+                        <td class="lista_id_inner_abrigada">${abrigada.id}</td>
+                        <td class="lista_nome_inner_abrigada">${abrigada.nome}</td>
+                        <td class="lista_telefone_inner_abrigada">${abrigada.telefone}</td>
                     </tr>
                 </c:forEach>
             </tbody>
