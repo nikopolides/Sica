@@ -26,7 +26,7 @@
                 <tr>
                     <td>Ações</td>
                     <td>
-                        <a href="<c:url value='/dependentePedagogia/pesquisa/${dependentePedagogia.idDependente}'/>" class="btn btn-mini btn-primary">Pesquisar</a>
+                        <a href="<c:url value='/dependentePedagogia/procura'/>" class="btn btn-mini btn-primary">Pesquisar</a>
                         <a href="<c:url value='/dependentePedagogia/edita/${dependentePedagogia.idDependente}'/>" class="btn btn-mini">Editar</a>
                     </td>
                 <tr>
