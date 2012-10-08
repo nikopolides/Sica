@@ -14,9 +14,10 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title>JSP Page</title>
-        <link type="text/css" rel="stylesheet" href="../../css/geral.css"/>
+        <link type="text/css" rel="stylesheet" href="<c:url value="/css/geral.css"/>"/>
     </head>
     <body>
+        <div class="principal">
         <c:if test="${errors != null}">
             <div id="erro">
                 Erros:<br />
@@ -26,67 +27,66 @@
             </div>
         </c:if>
         
+        
+        <h2>Pesquisar</h2><br/><br/>
        
-       
-        <form action="<c:url value="/livro/listaResultado"/>" method="post">
-            <h1>Pesquisar</h1>
+        <form action="<c:url value="/livro/listaResultado"/>" method="get" class="form-search">
             
-            Titulo :<input type="text" name="tituloPesquisado" value="${tituloPesquisado}"><br/>
-                                  
-                    
-            Autor :<input type="text" name="autorPesquisado" value="${autorPesquisado}"><br/>
             
-            <input type="submit" value="Pesquisar" />
+            Titulo/Autor :<input type="text" name="termoPesquisado" value="${termoPesquisado}" class="search-query">
+           
+            <input type="submit" value="Pesquisar" class="btn btn-primary"/>
                         
           
         </form>
-        
-            <c:if test="${action != null}">
-            <h2>Resultado da Busca</h2>
-            <c:choose>
-                <c:when test="${empty livroList}">
-                    <div id="busca_vazia">
-                       <p>A busca não retornou nenhum resultado.</p>
-                   </div>    
-                </c:when>
-                
-                <c:otherwise>
-                <table id="tblist">
-                        <thead>
-                        <th>Ações</th>
-                        <th>ID</th>
-                        <th>Titulo</th>
-                        <th>Editora</th>
-                        <th>Autor</th>
-                        <th>Ano de Publicação</th>
-                        <th>Edição</th>
-                    </thead>
-                    <tbody>
-                        <c:forEach items="${livroList}" var="livro">
-                            <tr>
-                                <td>
-                                    <a href="<c:url value='/livro/deleta/${livro.id}'/>">DELETA</a>
-                                    <br>
-                                    <a href="<c:url value='/livro/edita/${livro.id}'/>">EDITA</a>
-                                    <br>
-                                    <a href="<c:url value='/livro/info/${livro.id}'/>">INFO</a>
-                                    <br>
-                                </td>
-                                <td>${livro.id}</td>
-                                <td>${livro.titulo}</td>
-                                <td>${livro.editora}</td>
-                                <td>${livro.autor}</td>
-                                <td>${livro.publicacao}</td>
-                                <td>${livro.edicao}</td>
-                            </tr>
-                        </c:forEach>
-                    </tbody>
-                </table>
-                </c:otherwise>
-            </c:choose>
-        </c:if>
-
- 
             
+            <br/>
+            <c:if test="${action != null}">
+            <h3>Resultado da Busca</h3>
+
+                <c:choose>
+                    <c:when test="${empty livroList}">
+                        <div id="busca_vazia">
+                        <p>A busca não retornou nenhum resultado.</p>
+                    </div>    
+                    </c:when>
+
+                    <c:otherwise>
+                    <table id="tblist" class="table table-striped">
+                            <thead>
+                            <th>Titulo</th>
+                            <th>Editora</th>
+                            <th>Autor</th>
+                            <th>Ano de Publicação</th>
+                            <th>Edição</th>
+                            <th></th>
+                        </thead>
+                        <tbody>
+                            <c:forEach items="${livroList}" var="livro">
+                                <tr>
+                                    <td>${livro.titulo}</td>
+                                    <td>${livro.editora}</td>
+                                    <td>${livro.autor}</td>
+                                    <td>${livro.publicacao}</td>
+                                    <td>${livro.edicao}</td>
+                                    <td>
+                                        <a href="<c:url value='/livro/info/${livro.id}'/>" class="btn btn-mini btn-primary">Info</a>
+                                        <a href="<c:url value='/livro/edita/${livro.id}'/>" class="btn btn-mini">Editar</a>
+                                        <a href="<c:url value='/livro/deleta/${livro.id}'/>" class="btn btn-mini btn-danger">Excluir</a>                                      
+                                    </td>
+                                </tr>
+                            </c:forEach>
+                        </tbody>
+                    </table>
+                    </c:otherwise>
+                </c:choose>
+            </c:if>
+
+         <div class="actions">
+            <p>
+                <a href="<c:url value='/livro/form'/>" class="btn btn-primary">Cadastrar</a>       
+            </p>
+        </div>
+        </div>    
     </body>
 </html>
