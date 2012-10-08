@@ -7,7 +7,8 @@
     <head>
         <script>
 
-            window.onload=function(){    window.location="gui/index.jsp";    }
+//            window.onload=function(){    window.location="gui/index.jsp";    }
+              window.onload=function(){    window.location="abrigada/lista";    }
             
         </script>
     </head>

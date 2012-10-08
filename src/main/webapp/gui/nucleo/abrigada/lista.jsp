@@ -4,27 +4,13 @@
     Author     : Leonn Ferreira
 --%>
 
-
-        <h1>Lista de abrigadas:</h1>
-        <a href="<c:url value='/abrigada/form'/>">Cadastrar</a><br />
-        <table id="tblist" border="1">
+        <table id="tblist" border="1" class="table table-hover">
             <thead>
             <th>Ações</th>
             <th>ID</th>
             <th>Nome</th>
             <th>Cpf</th>
-            <th>Rg</th>
-            <th>Endere&ccedil;o</th>
-            <th>Cep</th>
-            <th>Data de Entrada</th>
-            <th>Data de Nascimento</th>
-            <th>Estado Civil</th>
-            <th>Profiss&atilde;o</th>
-            <th>Nacionalidade</th>
-            <th>Naturalidade</th>
-            <th>Escolaridade</th>
-            <th>Telefone</th>
-            <th>Celular</th>
+            <th>Telefones</th>
         </thead>
         <tbody>
             <c:forEach items="${abrigadaList}" var="abrigada">
@@ -70,18 +56,7 @@
                     <td>${abrigada.id}</td>
                     <td>${abrigada.nome}</td>
                     <td>${abrigada.cpf}</td> 
-                    <td>${abrigada.rg}</td>
-                    <td>${abrigada.endereco}</td>
-                    <td>${abrigada.cep}</td>
-                    <td>${abrigada.dataEntrada}</td>
-                    <td>${abrigada.dataNascimento}</td>
-                    <td>${abrigada.estadoCivil}</td>
-                    <td>${abrigada.profissao}</td>
-                    <td>${abrigada.nacionalidade}</td>
-                    <td>${abrigada.naturalidade}</td>
-                    <td>${abrigada.escolaridade}</td>
                     <td>${abrigada.telefone}</td>
-                    <td>${abrigada.celular}</td>
                 </tr>
             </c:forEach>
         </tbody>

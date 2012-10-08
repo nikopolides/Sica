@@ -25,7 +25,7 @@ public class AbrigadaDAO {
     public void adiciona(Abrigada abrigada){
         //manager.getTransaction().begin();
         manager.persist(abrigada);
-        manager.getTransaction().commit();
+        //manager.getTransaction().commit();
     }
     
     public void edita(Abrigada abrigada){
@@ -49,4 +49,12 @@ public class AbrigadaDAO {
     public Abrigada findById(Abrigada abrigada){
         return manager.find(Abrigada.class, abrigada.getId());
     }
+    
+    public List<Abrigada> salvaTudo(){
+        Query query = manager.createQuery(" from abrigada A, dependente B where A.id = B.idabrigada ");
+        List<Abrigada> lista = query.getResultList();
+        manager.close();
+        return lista;
+    }
+    
 }

@@ -1,22 +1,3 @@
-<%-- 
-    Document   : procura
-    Created on : 03/10/2012, 03:58:04
-    Author     : sica
---%>
-
-<%@page import="com.sica.entity.DependentePedagogia"%>
-<%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <title>JSP Page</title>
-        <link type="text/css" rel="stylesheet" href="<c:url value="/css/geral.css"/>"/>
-    </head>
-    <body>
         <div class="principal">
         <c:if test="${errors != null}">
             <div id="erro">

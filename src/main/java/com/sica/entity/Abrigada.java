@@ -25,26 +25,25 @@ public class Abrigada {
     private String endereco;
     private String cep;
     private String dataEntrada;
+    private String dataDesligamento;
     private String dataNascimento;
     private String estadoCivil;
-    private String profissao;    
+    private String profissao;
     private String nacionalidade;
     private String naturalidade;
     private String escolaridade;
     private String telefone;
-    private String celular;
 
-    public Abrigada() {
+    public Abrigada() { }
+
+    public String getDataDesligamento() {
+        return dataDesligamento;
     }
 
-    public String getCelular() {
-        return celular;
+    public void setDataDesligamento(String dataDesligamento) {
+        this.dataDesligamento = dataDesligamento;
     }
-
-    public void setCelular(String celular) {
-        this.celular = celular;
-    }
-
+    
     public String getCep() {
         return cep;
     }
@@ -159,7 +158,7 @@ public class Abrigada {
 
     @Override
     public String toString() {
-        return "Abrigada{" + "id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", rg=" + rg + ", endereco=" + endereco + ", cep=" + cep + ", dataEntrada=" + dataEntrada + ", dataNascimento=" + dataNascimento + ", estadoCivil=" + estadoCivil + ", profissao=" + profissao + ", nacionalidade=" + nacionalidade + ", naturalidade=" + naturalidade + ", escolaridade=" + escolaridade + ", telefone=" + telefone + ", celular=" + celular + '}';
+        return "Abrigada{" + "id=" + id + ", nome=" + nome + ", cpf=" + cpf + ", rg=" + rg + ", endereco=" + endereco + ", cep=" + cep + ", dataEntrada=" + dataEntrada + ", dataNascimento=" + dataNascimento + ", estadoCivil=" + estadoCivil + ", profissao=" + profissao + ", nacionalidade=" + nacionalidade + ", naturalidade=" + naturalidade + ", escolaridade=" + escolaridade + ", telefone=" + telefone + "}";
     }
     
    

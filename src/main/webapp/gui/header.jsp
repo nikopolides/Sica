@@ -12,7 +12,7 @@
 <head>
 	<title>SICA</title>
 	<meta http-equiv="Content-type" content="text/html; charset=ISO-8859-1" />
-	<link rel="stylesheet" href="style.css" type="text/css" />
+	<link rel="stylesheet" href="../style.css" type="text/css" />
         <%@include file="includes_js.jsp" %>
 	<script>
 
@@ -44,7 +44,7 @@
 		<div class="container_12">
                     <div class="grid_12">
                             <div class="grid_4">
-                                    <img src="images/logo.png" />
+                                    <img src="../images/logo.png" />
                             </div>
                             <div class=" grid_3"  id="busca_abrigada">
                                 <form class="form-search">
@@ -55,7 +55,7 @@
                                 </form>
                             </div>
                             <div class="grid_2 push_3">
-                                    <img src="images/gdf.png" />
+                                    <img src="../images/gdf.png" />
                             </div>
                     </div>
 		</div>

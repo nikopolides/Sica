@@ -17,10 +17,10 @@
 
 <c:choose>
     <c:when test="${empty action}" >
-        <form method="post" action="<c:url value="/abrigada/adiciona"/>" class="form-horizontal" id="cadastro_abrigada" name="cadastro_abrigada" class="alpha grid_10 omega">
+        <form method="post" action="<c:url value="/abrigada/adiciona"/>" class="form-horizontal alpha grid_11 omega" id="cadastro_abrigada" name="cadastro_abrigada" >
 </c:when>
 <c:otherwise>
-    <form action="<c:url value="/abrigada/atualizar"/>" method="post" id="cadastro_abrigada" name="cadastro_abrigada" class="alpha grid_10 omega">
+    <form action="<c:url value="/abrigada/atualizar"/>" method="post" id="cadastro_abrigada" name="cadastro_abrigada" class="alpha grid_11 omega">
 </c:otherwise>
 </c:choose>
 <input type="hidden" name="abrigada.id" value="${abrigada.id}" />
@@ -45,9 +45,10 @@
         Nacionalidade:
         <input id="abrigada_nacionalidade" type="text" name="abrigada.nacionalidade" placeholder="Nacionalidade" value="${abrigada.nacionalidade}"/>
     </label>
-    <label>
+
+    <div id="naturalidade">
         Naturalidade:
-        <select id="abrigada_naturalidade" name="abrigada.naturalidade" value="${abrigada.naturalidade}">
+        <select id="abrigada_naturalidade_estado" name="abrigada.naturalidade" value="${abrigada.naturalidade}">
             <option value="AC"> AC </option>
             <option value="AL"> AL </option>
             <option value="AP"> AP </option>
@@ -76,7 +77,8 @@
             <option value="SE"> SE </option>
             <option value="TO"> TO </option>
         </select>
-    </label>
+            <input id="abrigada_naturalidade_cidade" placeholder="Naturalidade cidade" type="text" />
+    </div>
 </div>
 <!-- Fim form esquerda -->
 
@@ -117,14 +119,14 @@
         </select> 
         <!-- <input data-placement="right" onclick="someBalao('abrigada_escolaridade')" onblur="someBalao('abrigada_escolaridade')" id="abrigada_escolaridade" type="text" name="escolaridade" placeholder="Escolaridade" />  -->
     </label>
-    <!--
-    <label>
-        Celular:
-        <input data-placement="left" onclick="someBalao('abrigada_celular')" onblur="someBalao('abrigada_celular')" id="abrigada_celular" type="text" name="abrigada.celular" placeholder="Celular" value="${abrigada.celular}"/>
-    </label>
-    -->
 </div>
 <!-- Fim form direita -->
+
+<label id="abrigada_data_desligamento" class="grid_11">
+    Data desligamento (último desligamento):
+    <input id="abrigada_data_DESLIGAMENTO" type="date" name="abrigada.dataDesligamento" placeholder="Data de saída" value="${abrigada.dataDesligamento}"/>
+</label>
+
 <!-- Parte referente a pergunta se há dependentes -->
 <div id="perguntaSeHaDependente" class="grid_11 rbSica">
     <span id="form_abrigada_tel">
@@ -138,9 +140,11 @@
         <input id="dependenteNao" type="radio" name="dependente" value="nao">Não
     </span>
 </div>
+<div id="campos_extra" class="grid_11">
+    <%@include file="camposExtras.jsp" %>
+</div>
+</form>
 <center>
-    <button type="button" onclick="submitAbrigada()" id="submit_cadastra_abrigada" class="btn btn-info" value="Cadastrar" onclick="redireciona('relatorioPsicoSocial', 'form')"><i class="icon-ok icon-white"></i> Cadastrar </button>
+    <button type="button" onclick="submitForm('cadastro_abrigada')" id="submit_cadastra_abrigada" class="btn btn-info"><i class="icon-ok icon-white"></i> Cadastrar </button>
     <button type="button" onclick="" class="btn btn-danger" id="cancel_btn"><i class="icon-remove icon-white"></i> Cancelar </button>
 </center>
-
-</form>

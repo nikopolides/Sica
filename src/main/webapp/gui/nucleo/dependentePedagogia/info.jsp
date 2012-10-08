@@ -1,21 +1,4 @@
-<%-- 
-    Document   : lista
-    Created on : Jun 12, 2012, 3:33:05 PM
-    Author     : Leonn Ferreira
---%>
 
-<%@page contentType="text/html" pageEncoding="ISO-8859-1"%>
-<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
-    "http://www.w3.org/TR/html4/loose.dtd">
-
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">       
-        <title>JSP Page</title>
-        <link type="text/css" rel="stylesheet" href="<c:url value="/css/geral.css"/>"/>
-    </head>
-    <body>
         <div class="principal">
             
             <h2>Informações do Dependente</h2>
@@ -194,5 +177,3 @@
                     <a href="<c:url value='/dependentePedagogia/lista'/>">Voltar para lista</a>                   
                 </div>
         </div>
-    </body>
-</html>

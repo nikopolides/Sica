@@ -23,22 +23,6 @@
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <!-- Grupo de item de menus -->
-                                                    <div class="accordion-group">
-                                                        <!-- Parte do titulo do item do menu  -->
-                                                        <div class="accordion-heading item-menu">
-                                                            <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapse_dependenteTwo">
-                                                                DEPENDENTE
-                                                            </a>
-                                                        </div>
-                                                        <!-- Content do que deve aparecer com a a nimação -->
-                                                        <div id="collapse_dependenteTwo" class="accordion-body collapse">
-                                                            <div class="accordion-inner well">
-                                                                <%@include file="nucleo/dependente/form.jsp" %>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                     <!-- Grupo de item de menus -->
                                                     <div class="accordion-group">
                                                         <!-- Parte do titulo do item do menu  -->
                                                         <div class="accordion-heading item-menu">

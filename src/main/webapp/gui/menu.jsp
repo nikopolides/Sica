@@ -14,7 +14,7 @@
 				<li><a href="#tabs1-pane3" data-toggle="tab">Pedagogia</a></li>
                                 <li><a href="#tabs1-pane4" data-toggle="tab">Psicologia</a></li>
                                 <li><a href="#tabs1-pane5" data-toggle="tab">Serviço Social</a></li>
-                                <li><a href="#tabs1-pane6" data-toggle="tab">Mais opções</a></li>
+                                <li><a href="#tabs1-pane6" data-toggle="tab">Visualizar Abrigada</a></li>
 			</ul>
 			<!-- fim menu -->
 			

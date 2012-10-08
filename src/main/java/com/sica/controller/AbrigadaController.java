@@ -34,12 +34,12 @@ public class AbrigadaController {
         System.out.println("Chamando o form");
     }
     
-    //@Get("/abrigada")
+    //@Get("/../../gui/nucleo/abrigada")
     public List<Abrigada> lista(){
         return dao.listaTodos();
     }
     
-    //@Post("/abrigada")
+    //@Post("/../../gui/nucleo/abrigada")
     public void adiciona(final Abrigada abrigada){
         // Valida
         validator.checking(new Validations(){{
