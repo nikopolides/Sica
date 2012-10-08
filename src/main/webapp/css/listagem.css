@@ -1,0 +1,29 @@
+/* 
+    Document   : listagem
+    Created on : 06/10/2012, 22:59:31
+    Author     : TonGarcia
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+table i {
+    margin: 3px 5px;
+}
+
+table .lista_id_abrigada {
+    padding: 1px 12px;
+}
+
+.lista_nome_inner_abrigada {
+    text-align: center;
+} 
+
+.lista_telefone_inner_abrigada {
+    padding: 1px 23px;
+    text-align: center;
+}
+
+.lista_abriga_nome_coluna {
+   text-align: center;
+   padding: 2px 13px;
+}
