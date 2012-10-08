@@ -38,32 +38,32 @@ public class LivroDAO {
     }
     
     public List<Livro> listaTodos(){
-        Query query = entityManager.createQuery("from Livro");
+        Query query = entityManager.createQuery("from Livro order by titulo asc");
         List<Livro> lista = query.getResultList();
-        Collections.sort(lista, new Comparator<Livro>(){
+        /*Collections.sort(lista, new Comparator<Livro>(){
         
-            @Override
+        @Override
         public int compare (Livro l1, Livro l2){
             return l1.getTitulo().compareTo(l2.getTitulo());
                           
         }
-    });
+    });*/
         //entityManager.close();
         return lista;
     }
     
     public List<Livro> listaAutor(){
-        Query query = entityManager.createQuery("from Livro");
+        Query query = entityManager.createQuery("from Livro order by autor asc");
         List<Livro> listaAutor = query.getResultList();
-        Collections.sort(listaAutor, new Comparator<Livro>(){
+        /*Collections.sort(listaAutor, new Comparator<Livro>(){
         
             @Override
         public int compare (Livro l1, Livro l2){
             return l1.getAutor().compareTo(l2.getAutor());
                           
-        }
-    });
+        }*/
         //entityManager.close();
+        
         return listaAutor;
     }
     
@@ -77,15 +77,22 @@ public class LivroDAO {
         return entityManager.find(Livro.class, livro.getId());
     }
     
+    /*
     public List<Livro> findByTitulo(String tituloPesquisado){
         Query query = entityManager.createQuery("from Livro where titulo like '%"+tituloPesquisado+"%'");
         List <Livro>lista=query.getResultList();
         return lista;        
-    }
+    } */
     public List<Livro> findByAutor(String autorPesquisado){
         Query query = entityManager.createQuery("from Livro where autor like '%"+autorPesquisado+"%'");
         List <Livro>lista=query.getResultList();
         return lista;        
+    }
+    
+    public List<Livro> findByAutorOuTitulo(String termoPesquisado) {
+        Query query = entityManager.createQuery("from Livro where autor like '%"+termoPesquisado+"%' or titulo like '%"+termoPesquisado+"%'");
+        // 
+        return query.getResultList();
     }
     
 }
