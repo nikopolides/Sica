@@ -12,8 +12,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <link type="text/css" rel="stylesheet" href="../css/geral.css"/>
-        <title>JSP Page</title>
+         <link type="text/css" rel="stylesheet" href="<c:url value="/css/geral.css"/>"/>
     </head>
     <body>
         <h1>Informações do livro:</h1>

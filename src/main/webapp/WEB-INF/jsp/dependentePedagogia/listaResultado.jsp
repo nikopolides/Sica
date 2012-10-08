@@ -12,7 +12,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
         <title>Lista Dependentes</title>
-        <link type="text/css" rel="stylesheet" href="../css/geral.css"/>
+         <link type="text/css" rel="stylesheet" href="<c:url value="/css/geral.css"/>"/>
     </head>
     <body>
         <h1>Resultado da Busca</h1>

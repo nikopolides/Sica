@@ -10,10 +10,10 @@
     "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">       
-        <title>JSP Page</title>
-        <link type="text/css" rel="stylesheet" href="../css/geral.css"/>
+   <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+        <title>Lista Dependentes</title>
+         <link type="text/css" rel="stylesheet" href="<c:url value="/css/geral.css"/>"/>
     </head>
     <body>
         <h1>Informações da abrigada:</h1>

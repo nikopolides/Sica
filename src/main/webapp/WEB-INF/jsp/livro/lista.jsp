@@ -10,11 +10,12 @@
     "http://www.w3.org/TR/html4/loose.dtd">
 
 <html>
-    <head>
+     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-        <title>JSP Page</title>
-        <link type="text/css" rel="stylesheet" href="../css/geral.css"/>
+        <title>Lista Livro</title>
+         <link type="text/css" rel="stylesheet" href="<c:url value="/css/geral.css"/>"/>
     </head>
+    <body>
     <body>
         <div id="livro_mensagem">
             <i style="color: blue"> ${mensagem} </i>
