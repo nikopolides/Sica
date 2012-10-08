@@ -1,0 +1,46 @@
+#form {
+	padding: 75px;
+	margin-top: 170px;
+	margin-bottom: 64px;
+}
+
+#pagina_tela{			
+	background-color:#000000;
+	filter:alpha(opacity=80);  
+	opacity: 0.8;     
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	display:none;
+}
+
+#corpo {
+
+}
+
+#alert-success {
+	z-index: 99;
+        margin-left: 18%;
+        margin-top: 15%;
+        display: none;
+	position: fixed;
+}
+
+#alert-error {
+    z-index: 99;
+    margin-left: 18%;
+    margin-top: 15%;
+    display: none;
+    position: fixed;
+}
+
+#alert-warning {
+    z-index: 99;
+    margin-left: 18%;
+    margin-top: 15%;
+    display: none;
+    position: fixed;
+}
+
+
